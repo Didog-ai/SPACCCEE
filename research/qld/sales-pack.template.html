@@ -1,0 +1,214 @@
+<title>QLD Dealer Hit List</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a yard-manager's call sheet. Summary strip, filters, then one row per dealer that opens into a working card. */
+:root {
+  --bg: #f3f5f6; --surface: #ffffff; --sunk: #e8ecee; --line: #d3dade;
+  --fg: #15212a; --muted: #5a6872; --accent: #22506b; --accent-fg: #ffffff;
+  --t1: #b8670f; --t1-bg: #fbecd8; --t2: #22506b; --t2-bg: #dde9f0; --t3: #5a6872; --t3-bg: #e8ecee;
+  --warn-bg: #fff4e0; --warn-line: #e7b867;
+  --display: 'Barlow Semi Condensed', 'Arial Narrow', sans-serif;
+  --body: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11181d; --surface: #182229; --sunk: #0d1317; --line: #2a3740;
+  --fg: #e4eaee; --muted: #93a3ad; --accent: #7fb6d6; --accent-fg: #0d1317;
+  --t1: #f0a64b; --t1-bg: #3a2a14; --t2: #8cc3e3; --t2-bg: #1b3242; --t3: #a3b1ba; --t3-bg: #24313a;
+  --warn-bg: #2e2412; --warn-line: #7a5a22; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #11181d; --surface: #182229; --sunk: #0d1317; --line: #2a3740;
+  --fg: #e4eaee; --muted: #93a3ad; --accent: #7fb6d6; --accent-fg: #0d1317;
+  --t1: #f0a64b; --t1-bg: #3a2a14; --t2: #8cc3e3; --t2-bg: #1b3242; --t3: #a3b1ba; --t3-bg: #24313a;
+  --warn-bg: #2e2412; --warn-line: #7a5a22; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; letter-spacing: 0.005em; }
+h1 { font-size: clamp(30px, 5vw, 44px); font-weight: 800; line-height: 1.05; }
+h2 { font-size: 24px; font-weight: 700; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.lede { color: var(--muted); max-width: 68ch; margin: 10px 0 0; }
+.strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line);
+  border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-top: 22px; }
+.strip div { background: var(--surface); padding: 14px 16px; }
+.strip b { display: block; font-family: var(--display); font-size: 30px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.strip span { color: var(--muted); font-size: 13px; }
+.warn { margin-top: 18px; background: var(--warn-bg); border: 1px solid var(--warn-line); border-radius: 10px; padding: 14px 18px; }
+.warn h3 { font-size: 18px; margin-bottom: 6px; }
+.warn ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 28px 0 12px; }
+.chip { font: 600 13px var(--body); border: 1px solid var(--line); background: var(--surface); color: var(--fg);
+  border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.chip:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+#q { flex: 1 1 200px; min-width: 0; font: 14px var(--body); padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--fg); }
+.list { display: grid; gap: 8px; }
+details.p { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+details.p > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; gap: 4px 14px;
+  align-items: center; padding: 14px 16px; }
+details.p > summary::-webkit-details-marker { display: none; }
+.tier { font: 600 12px var(--mono); padding: 3px 8px; border-radius: 6px; white-space: nowrap; }
+.tier.t1 { color: var(--t1); background: var(--t1-bg); } .tier.t2 { color: var(--t2); background: var(--t2-bg); }
+.tier.t3 { color: var(--t3); background: var(--t3-bg); }
+.nm { min-width: 0; }
+.nm b { font-family: var(--display); font-size: 20px; font-weight: 700; display: block; line-height: 1.15; }
+.nm span { color: var(--muted); font-size: 13px; }
+.meta { text-align: right; font-size: 13px; color: var(--muted); white-space: nowrap; }
+.meta b { color: var(--fg); font-family: var(--mono); font-weight: 600; }
+.card { border-top: 1px solid var(--line); padding: 18px 16px 20px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 22px; }
+.card section { min-width: 0; display: grid; gap: 14px; align-content: start; }
+.lbl { font: 600 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.kv { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 6px 10px; font-size: 14px; }
+.kv dt { color: var(--muted); } .kv dd { margin: 0; overflow-wrap: anywhere; }
+.mono { font-family: var(--mono); font-size: 13px; }
+.ev { margin: 0; padding-left: 16px; display: grid; gap: 4px; font-size: 14px; }
+.pill { display: inline-block; font-size: 13px; background: var(--sunk); border-radius: 6px; padding: 2px 8px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; font: 600 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 4px 6px; border-bottom: 1px solid var(--line); }
+td { padding: 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+td.c { font-family: var(--mono); white-space: nowrap; color: var(--accent); }
+.mail { background: var(--sunk); border-radius: 8px; padding: 12px 14px; }
+.mail .subj { font-weight: 600; margin-bottom: 8px; }
+.mail pre { margin: 0; white-space: pre-wrap; font: 13.5px/1.5 var(--body); max-height: 340px; overflow: auto; }
+.btns { display: flex; gap: 8px; flex-wrap: wrap; }
+button.copy { font: 600 13px var(--body); border: 1px solid var(--accent); color: var(--accent); background: transparent; border-radius: 8px; padding: 6px 10px; cursor: pointer; }
+button.copy.done { background: var(--accent); color: var(--accent-fg); }
+.tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.tablewrap table { font-size: 14px; } .tablewrap td, .tablewrap th { padding: 10px 12px; }
+.section { margin-top: 40px; display: grid; gap: 12px; }
+.empty { color: var(--muted); padding: 20px; text-align: center; }
+@media (max-width: 760px) {
+  .card { grid-template-columns: 1fr; }
+  details.p > summary { grid-template-columns: auto minmax(0, 1fr); }
+  .meta { grid-column: 2; text-align: left; white-space: normal; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">Innovatix · Queensland prospecting · researched 24 Nov 2026</div>
+  <h1>QLD Dealer Hit List</h1>
+  <p class="lede">Trailer businesses across Queensland we can approach, with verified contact details, what each one sells,
+    how we can serve them, a tailored pitch and a ready-to-send meeting email. Every prospect has its own range proposal PDF. Prospects with a published email address have a Gmail draft with the PDF attached.</p>
+
+  <div class="strip" id="strip"></div>
+
+  <div class="warn">
+    <h3>Before you send anything</h3>
+    <ul>
+      <li><b>Check against your current customers.</b> We don't know who your existing QLD wholesalers are. Stonegate in particular has QLD and Melbourne stores, so it could already be a customer.</li>
+      <li><b>Freight times.</b> Sea freight from India to Brisbane is usually slower than from China, so the emails say "dependable lead times" rather than "faster freight". Once you've confirmed your order-to-yard time, we can make that line specific.</li>
+      <li><b>Sourcing labels.</b> "Stated" means the dealer says it on their website. "Inference" is our read and should be confirmed on the call. Tier 3 builders get a capacity pitch, never the China angle.</li>
+      <li><b>Model specs in the PDFs are indicative.</b> Check them against your real range before sending, and add your phone number and name to your Gmail signature.</li>
+    </ul>
+  </div>
+
+  <div class="controls" role="group" aria-label="Filter prospects">
+    <button class="chip" data-f="all" aria-pressed="true">All</button>
+    <button class="chip" data-f="1" aria-pressed="false">Tier 1 · importers</button>
+    <button class="chip" data-f="2" aria-pressed="false">Tier 2 · dealers</button>
+    <button class="chip" data-f="3" aria-pressed="false">Tier 3 · builders</button>
+    <input id="q" type="search" placeholder="Search name, city or region" aria-label="Search prospects">
+  </div>
+  <div class="list" id="list"></div>
+
+  <div class="section">
+    <div><div class="eyebrow">Phone first</div><h2>Call-only list</h2>
+      <p class="lede">These came from Yellow Pages with a phone number but no website we could read. Qualify each one with the call script before emailing.</p></div>
+    <div class="tablewrap"><table><thead><tr><th>Business</th><th>Phone</th><th>Address</th><th>Note</th></tr></thead><tbody id="calls"></tbody></table></div>
+  </div>
+
+  <div class="section">
+    <div><div class="eyebrow">Skip</div><h2>Not worth approaching</h2></div>
+    <div class="tablewrap"><table><thead><tr><th>Business</th><th>Why</th></tr></thead><tbody id="excl"></tbody></table></div>
+  </div>
+
+  <p class="lede" style="margin-top:32px" id="method"></p>
+</div>
+
+<script>
+const PACK = /*__PACK__*/null;
+const P = PACK.data.prospects, E = PACK.emails, M = PACK.models;
+const tierName = {1: 'Importer', 2: 'Dealer', 3: 'Builder'};
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function strip() {
+  const n = (t) => P.filter((p) => p.tier === t).length;
+  const withEmail = P.filter((p) => p.email).length;
+  const est = P.reduce((a, p) => a + (p.est_containers_pm || 0), 0);
+  document.getElementById('strip').innerHTML = [
+    [P.length, 'prospects researched'], [n(1), 'tier 1 · import buyers'], [withEmail, 'with a published email'],
+    [PACK.data.call_only.length, 'more on the call list'], [est.toFixed(1), 'containers/mo if all convert']
+  ].map(([b, s]) => `<div><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join('');
+}
+
+async function copy(btn, text) {
+  try { await navigator.clipboard.writeText(text); btn.textContent = 'Copied'; btn.classList.add('done'); }
+  catch (e) { const pre = btn.closest('.mail')?.querySelector('pre'); if (pre) { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } btn.textContent = 'Selected: press Ctrl+C'; }
+  setTimeout(() => { btn.classList.remove('done'); btn.textContent = btn.dataset.label; }, 1800);
+}
+
+function card(p) {
+  const e = E[p.id];
+  const models = p.models.map((c) => { const m = M[c]; return `<tr><td class="c">INX-${esc(c)}</td><td>${esc(m[0])}<br><span style="color:var(--muted)">${esc(m[1])}</span></td><td class="mono">${esc(m[3])}</td></tr>`; }).join('');
+  const emailRow = p.email ? `<span class="mono">${esc(p.email)}</span>` : `<span style="color:var(--muted)">${esc(p.email_note || 'Not published')}</span>`;
+  const extraEmail = p.email && p.email_note ? `<br><span style="color:var(--muted);font-size:13px">${esc(p.email_note)}</span>` : '';
+  return `<details class="p" data-tier="${p.tier}" data-q="${esc((p.company + ' ' + p.city + ' ' + p.region).toLowerCase())}">
+    <summary><span class="tier t${p.tier}">T${p.tier} · ${tierName[p.tier]}</span>
+      <span class="nm"><b>${esc(p.company)}</b><span>${esc(p.city)} · ${esc(p.region)}</span></span>
+      <span class="meta">Priority ${esc(p.priority)}<br>Est. <b>${esc(p.est_containers_pm)}</b> containers/mo</span></summary>
+    <div class="card">
+      <section>
+        <div><div class="lbl">Contact</div><dl class="kv">
+          <dt>Phone</dt><dd class="mono">${p.phones.map(esc).join('<br>')}</dd>
+          <dt>Email</dt><dd>${emailRow}${extraEmail}</dd>
+          <dt>Website</dt><dd><a href="${esc(p.website)}" target="_blank" rel="noopener">${esc(p.website.replace(/^https?:\/\//, ''))}</a></dd>
+          <dt>Address</dt><dd>${esc(p.address)}</dd>
+          ${p.contact_name ? `<dt>Person</dt><dd>${esc(p.contact_name)}</dd>` : ''}
+        </dl></div>
+        <div><div class="lbl">What they sell</div><div style="font-size:14px">${esc(p.sells)}</div></div>
+        <div><div class="lbl">Evidence</div><ul class="ev">${p.evidence.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
+        <div><div class="lbl">Sourcing</div><span class="pill">${esc(p.sourcing)}</span></div>
+      </section>
+      <section>
+        <div><div class="lbl">How we cater to them</div><div style="font-size:14px">${esc(p.cater)}</div></div>
+        <div><div class="lbl">Pitch angle</div><div style="font-size:14px;font-weight:600">${esc(p.angle)}</div></div>
+        <div><div class="lbl">Range proposal (attached PDF: ${esc(e.attachment)})</div>
+          <table><thead><tr><th>Model</th><th>Trailer</th><th>ATM</th></tr></thead><tbody>${models}</tbody></table></div>
+        <div class="mail"><div class="lbl">Meeting email ${p.email ? '· saved as a Gmail draft with the PDF attached' : '· not in Gmail (no public email): paste into their web form or send after your call'}</div>
+          <div class="subj">${esc(e.subject)}</div><pre>${esc(e.body)}</pre>
+          <div class="btns" style="margin-top:10px">
+            <button class="copy" data-label="Copy email" data-k="${esc(p.id)}" data-what="body">Copy email</button>
+            <button class="copy" data-label="Copy subject" data-k="${esc(p.id)}" data-what="subject">Copy subject</button>
+          </div></div>
+      </section>
+    </div></details>`;
+}
+
+let filter = 'all';
+function render() {
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const rows = P.filter((p) => (filter === 'all' || String(p.tier) === filter) && (!q || (p.company + ' ' + p.city + ' ' + p.region).toLowerCase().includes(q)));
+  document.getElementById('list').innerHTML = rows.length ? rows.map(card).join('') : '<div class="empty">No prospects match. Clear the search or pick another tier.</div>';
+}
+
+document.querySelectorAll('.chip').forEach((b) => b.addEventListener('click', () => {
+  filter = b.dataset.f; document.querySelectorAll('.chip').forEach((c) => c.setAttribute('aria-pressed', String(c === b))); render();
+}));
+document.getElementById('q').addEventListener('input', render);
+document.getElementById('list').addEventListener('click', (ev) => {
+  const b = ev.target.closest('button.copy'); if (!b) return;
+  const e = E[b.dataset.k]; copy(b, b.dataset.what === 'subject' ? e.subject : e.body);
+});
+document.getElementById('calls').innerHTML = PACK.data.call_only.map((c) => `<tr><td>${esc(c.company)}</td><td class="mono" style="white-space:nowrap">${esc(c.phone)}</td><td>${esc(c.address)}</td><td style="color:var(--muted)">${esc(c.note || '')}</td></tr>`).join('');
+document.getElementById('excl').innerHTML = PACK.data.excluded.map((c) => `<tr><td>${esc(c.company)}</td><td>${esc(c.reason)}</td></tr>`).join('');
+document.getElementById('method').textContent = 'How this was built: ' + PACK.data.method;
+strip(); render();
+const first = document.querySelector('details.p'); if (first) first.open = true;
+</script>
