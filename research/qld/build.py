@@ -15,6 +15,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
+ASSETS = "../../assets"  # product photos, relative to out/catalogues/
 DATA = json.loads((HERE / "prospects.json").read_text(encoding="utf-8"))
 
 # Indicative Innovatix range. Final spec, ATM and pricing are confirmed on quote.
@@ -42,6 +43,7 @@ MODELS = {
     "BT55":  ("Galvanised Boat Trailer", "Single or tandem axle", "Multi-roller, boats to 5.5 m", "750-1400 kg", "Salt-water ready."),
     "OR75":  ("7x5 Off-Road Box", "Single axle, braked", "Heavy-duty springs, off-road coupling", "1400 kg", "Built for outback tracks."),
     "LS85":  ("8x5 Stock Crate Trailer", "Tandem axle, braked", "Galvanised crate, rear ramp", "2000 kg", "Small livestock and farm moves."),
+    "UT":    ("Steel Ute Tray", "Single or dual cab", "Checker-plate floor, drop sides, headboard with ladder rack", "n/a", "Sell trays alongside trailers to the same trade buyers."),
     "CHS":   ("Rolling Chassis / Flat-Pack Kit", "Any size 6x4 to 12x6", "Galvanised chassis, drawbar and axle mounts, built to your drawings", "to suit", "Finish and badge them in your own workshop."),
     "CAGE":  ("Cages and Sub-Assemblies", "Made to order", "Mesh cages, drawbars, ramps, tailgates", "n/a", "Extra fabrication capacity."),
 }
@@ -117,7 +119,7 @@ def email_for(p: dict) -> dict:
         intro, "",
         lead,
         *[f"- {b}" for b in bullets], "",
-        f"I've attached a short range proposal built around the {p['range_line']} you already sell.", "",
+        f"I've attached a short range proposal built around the {p['range_line']} you already sell, with photos of recent builds from our factory.", "",
         f"Could we find 30 minutes in the next couple of weeks? I'm happy to meet {p['meeting']} and bring a weld "
         "cut-section and our mill certificates so you can see the build quality first-hand. Would Tuesday 1 or "
         "Thursday 3 December work, or is there a better time for you?", "",
@@ -126,7 +128,7 @@ def email_for(p: dict) -> dict:
     html_body = (
         f"<p>{esc(greet)}</p><p>{esc(p['opener'])}</p><p>{esc(intro)}</p><p>{esc(lead)}</p><ul>"
         + "".join(f"<li>{esc(b)}</li>" for b in bullets)
-        + f"</ul><p>I've attached a short range proposal built around the {esc(p['range_line'])} you already sell.</p>"
+        + f"</ul><p>I've attached a short range proposal built around the {esc(p['range_line'])} you already sell, with photos of recent builds from our factory.</p>"
         f"<p>Could we find 30 minutes in the next couple of weeks? I'm happy to meet {esc(p['meeting'])} and bring a "
         "weld cut-section and our mill certificates so you can see the build quality first-hand. Would Tuesday 1 or "
         "Thursday 3 December work, or is there a better time for you?</p><p>Kind regards,</p>"
@@ -153,12 +155,23 @@ h1, h2, h3 { font-family: 'Inter Display', Inter, sans-serif; margin: 0; letter-
 .cover h1 { font-size: 34pt; line-height: 1.05; font-weight: 800; margin-top: 46mm; max-width: 150mm; }
 .cover .for { margin-top: 8mm; font-size: 13pt; color: #c5d3dc; }
 .cover .for b { color:#fff; }
-.spangle { margin-top: auto; height: 78mm; background:
-  repeating-linear-gradient(115deg, rgba(255,255,255,.05) 0 9mm, rgba(255,255,255,0) 9mm 19mm),
-  repeating-linear-gradient(35deg, rgba(255,255,255,.04) 0 6mm, rgba(255,255,255,0) 6mm 15mm),
-  linear-gradient(160deg, #6f8594, #a9b8c1 45%, #7d929f); position: relative; }
-.spangle .plate { position:absolute; left:16mm; bottom:14mm; background: #f4f6f7; color: var(--ink); border-radius: 2mm;
-  padding: 5mm 6mm; width: 92mm; box-shadow: 0 1mm 3mm rgba(0,0,0,.25); }
+.cover h1 { margin-top: 20mm; }
+.spangle { margin-top: auto; height: 132mm; background-size: cover; background-position: center 72%; position: relative; }
+.spangle::after { content: "Galvanised enclosed tradie trailer, built in our factory"; position: absolute; right: 16mm; bottom: 6mm;
+  font-family: 'JetBrains Mono'; font-size: 7.5pt; color: #fff; background: rgba(22,35,45,.72); padding: 1mm 2mm; border-radius: 1mm; }
+.proof { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4mm 3mm; }
+.proof figure { margin: 0; }
+.proof img { width: 100%; display: block; object-fit: cover; border-radius: 1mm; }
+.proof .big img { height: 100mm; }
+.proof .sm img { height: 62mm; }
+.proof .big { grid-column: span 4; } .proof .side { grid-column: span 2; } .proof .side img { height: 100mm; }
+.proof .sm { grid-column: span 2; }
+.proof .half { grid-column: span 3; } .proof .half img { height: 70mm; }
+.proof figcaption { font-size: 8pt; color: var(--muted); margin-top: 1.5mm; line-height: 1.35; }
+.proof figcaption b { color: var(--ink); font-weight: 600; }
+.lede2 { color: var(--muted); max-width: 150mm; margin: -3mm 0 6mm; }
+.plate { margin-top: 9mm; background: #f4f6f7; color: var(--ink); border-radius: 2mm;
+  padding: 5mm 6mm; width: 92mm; }
 .plate .row { display:flex; justify-content: space-between; font-family:'JetBrains Mono'; font-size: 8.5pt; padding: 1mm 0; border-bottom: .2mm solid var(--zinc2); }
 .plate .row:last-child { border-bottom: 0; }
 .plate .hd { font-family:'Inter Display'; font-weight:700; font-size: 8pt; letter-spacing:.16em; color: var(--muted); margin-bottom: 1.5mm; }
@@ -205,8 +218,6 @@ def catalogue_html(p: dict) -> str:
     <div class="brand">INNOVATIX<span>.</span></div>
     <h1>{esc(title)}</h1>
     <div class="for">Range proposal prepared for <b>{company}</b>, {esc(p['city'])}</div>
-  </div>
-  <div class="spangle">
     <div class="plate">
       <div class="hd">BUILD SPECIFICATION</div>
       <div class="row"><span>Finish</span><span>Hot-dip galvanised</span></div>
@@ -215,6 +226,8 @@ def catalogue_html(p: dict) -> str:
       <div class="row"><span>Compliance</span><span>ADR · VIN plated</span></div>
       <div class="row"><span>Supply</span><span>Flat-pack · mixed loads</span></div>
     </div>
+  </div>
+  <div class="spangle" style="background-image:url('{ASSETS}/enclosed-trailer-side-door-ramp.jpg')">
   </div>
 </section>
 <section class="page">
@@ -228,6 +241,41 @@ def catalogue_html(p: dict) -> str:
   <div class="fine"><span>Innovatix · range proposal for {company}</span><span>Page 2</span></div>
 </section>
 <section class="page">
+  <div class="eyebrow">Proof of work · galvanised trailers</div>
+  <h2>Built in our factory. Already working for Australian dealers.</h2>
+  <p class="lede2">Recent builds photographed at our factory before dispatch, from the same production line that
+  supplies our Queensland and Victorian dealers. Every panel, frame and drawbar is hot-dip galvanised.</p>
+  <div class="proof">
+    <figure class="big"><img src="{ASSETS}/enclosed-trailer-side-door-ramp.jpg" alt="Galvanised enclosed trailer, three-quarter view with side door and ramp open">
+      <figcaption><b>Enclosed tradie trailer.</b> Fully galvanised body and A-frame drawbar, gas-strut side access door, fold-down checker-plate side ramp.</figcaption></figure>
+    <figure class="side"><img src="{ASSETS}/enclosed-trailer-loading-ramps.jpg" alt="Galvanised trailer with twin loading ramps">
+      <figcaption><b>Twin loading ramps.</b> Checker-plate ramps for mowers, quads and equipment.</figcaption></figure>
+    <figure class="sm"><img src="{ASSETS}/enclosed-trailer-rear-doors-open.jpg" alt="Galvanised trailer with rear barn doors open">
+      <figcaption><b>Barn doors open.</b> Checker-plate floor and doors, internal rails, ramp stowage underneath.</figcaption></figure>
+    <figure class="sm"><img src="{ASSETS}/enclosed-trailer-front-drawbar.jpg" alt="Galvanised trailer front view showing A-frame drawbar">
+      <figcaption><b>Front view.</b> Galvanised A-frame drawbar, lockable front door with T-handle.</figcaption></figure>
+    <figure class="sm"><img src="{ASSETS}/galvanised-highside-trailer.jpg" alt="Galvanised high-side trailer, rear view with doors closed">
+      <figcaption><b>Closed up.</b> Lockable twin barn doors and LED combination lamps.</figcaption></figure>
+  </div>
+  <div class="fine"><span>Innovatix · range proposal for {company}</span><span>Page 3</span></div>
+</section>
+<section class="page">
+  <div class="eyebrow">Proof of work · steel ute trays</div>
+  <h2>Alongside trailers, we build heavy-duty ute trays.</h2>
+  <p class="lede2">Sell trays to the same trade buyers who buy your trailers. Same factory, same steel, same quality checks.</p>
+  <div class="proof">
+    <figure class="big"><img src="{ASSETS}/ute-tray-dropsides-open.jpg" alt="Steel ute tray with drop sides lowered">
+      <figcaption><b>Steel ute tray.</b> Drop sides with over-centre latches, checker-plate floor, headboard with ladder rack.</figcaption></figure>
+    <figure class="side"><img src="{ASSETS}/ute-tray-dropsides-headboard.jpg" alt="Steel ute tray with sides up">
+      <figcaption><b>Sides up.</b> Full-height sides and integrated under-tray frame.</figcaption></figure>
+    <figure class="half"><img src="{ASSETS}/ute-tray-flatdeck-rear.jpg" alt="Flat-deck tray from the rear">
+      <figcaption><b>Flat deck, rear.</b> Tailgate with tie rail and side load posts.</figcaption></figure>
+    <figure class="half"><img src="{ASSETS}/ute-tray-flatdeck.jpg" alt="Flat-deck tray ready for dispatch">
+      <figcaption><b>Flat deck.</b> Checker-plate floor, finished and ready to ship.</figcaption></figure>
+  </div>
+  <div class="fine"><span>Innovatix · range proposal for {company}</span><span>Page 4</span></div>
+</section>
+<section class="page">
   <div class="eyebrow">Proposed range for {company}</div>
   <h2>Matched to the {esc(p['range_line'])} you already sell</h2>
   <table><thead><tr><th>Model</th><th>Description</th><th>ATM</th><th>Best for</th></tr></thead>
@@ -236,7 +284,7 @@ def catalogue_html(p: dict) -> str:
   <p>We'll walk through this range, bring a weld sample and the mill certificates, and price your top models
   landed in {esc(p['city'])}. Reply to the email this came with to lock in a time.</p></div>
   <div class="fine"><span>Specifications are indicative. Final dimensions, ATM, componentry and dealer pricing are confirmed on quotation.
-  Complete trailers are built to the Australian Design Rules and supplied with a VIN.</span><span>Page 3</span></div>
+  Complete trailers are built to the Australian Design Rules and supplied with a VIN.</span><span>Page 5</span></div>
 </section>
 </body></html>"""
 

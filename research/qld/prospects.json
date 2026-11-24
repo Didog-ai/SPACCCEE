@@ -5,10 +5,16 @@
     {
       "id": "wide-bay",
       "company": "Wide Bay Trailers",
-      "tier": 1, "priority": "High", "est_containers_pm": 1,
-      "region": "Wide Bay / Bundaberg", "city": "Gin Gin",
+      "tier": 1,
+      "priority": "High",
+      "est_containers_pm": 1,
+      "region": "Wide Bay / Bundaberg",
+      "city": "Gin Gin",
       "address": "68 Mulgrave Street, Gin Gin QLD 4671",
-      "phones": ["1300 237 887", "0409 749 943"],
+      "phones": [
+        "1300 237 887",
+        "0409 749 943"
+      ],
       "email": "sales@widebaytrailers.com.au",
       "website": "https://www.widebaytrailers.com.au",
       "contact_name": null,
@@ -24,15 +30,29 @@
       "opener": "I noticed Wide Bay Trailers sources globally and assembles here in Queensland. That's exactly how we supply dealers, so I thought it was worth a conversation.",
       "range_line": "8x5 tipping cage trailers, ATV trailers and tandems",
       "meeting": "in person in Gin Gin",
-      "models": ["CG85T", "ATV85", "BX74", "BX85", "TD105", "TP85"]
+      "models": [
+        "CG85T",
+        "ATV85",
+        "BX74",
+        "BX85",
+        "TD105",
+        "TP85"
+      ]
     },
     {
       "id": "bonanza",
       "company": "Bonanza Trailers",
-      "tier": 1, "priority": "High", "est_containers_pm": 2,
-      "region": "Brisbane / Sunshine Coast (also Newcastle and Perth)", "city": "Chevallum + Brisbane",
+      "tier": 1,
+      "priority": "High",
+      "est_containers_pm": 2,
+      "region": "Brisbane / Sunshine Coast (also Newcastle and Perth)",
+      "city": "Chevallum + Brisbane",
       "address": "7071 Bruce Highway, Chevallum QLD 4555 (Sunshine Coast branch); Brisbane, Newcastle (HQ) and Perth branches",
-      "phones": ["1300 422 922", "(07) 5453 7960", "(07) 2106 0600"],
+      "phones": [
+        "1300 422 922",
+        "(07) 5453 7960",
+        "(07) 2106 0600"
+      ],
       "email": null,
       "email_note": "No public email address. Use the quote/contact form on the website or call.",
       "website": "https://bonanzatrailers.com.au",
@@ -49,15 +69,33 @@
       "opener": "Bonanza has built a big following for galvanised trailers across four states. I'd like to show you how we could supply part of that range direct from our own factory.",
       "range_line": "box, tradie, plant, tipper and car trailers",
       "meeting": "at your Brisbane or Sunshine Coast branch",
-      "models": ["BX75", "CG85", "TD105", "TD126", "CC45", "PL35", "TP106", "ATV85"]
+      "models": [
+        "BX75",
+        "CG85",
+        "TD105",
+        "TD126",
+        "CC45",
+        "PL35",
+        "TP106",
+        "ATV85"
+      ]
     },
     {
       "id": "stonegate",
       "company": "Stonegate Industries",
-      "tier": 1, "priority": "High (check first: may already be a customer)", "est_containers_pm": 2,
-      "region": "Brisbane / Gold Coast / Toowoomba (also Melbourne)", "city": "Archerfield",
+      "tier": 1,
+      "priority": "High (check first: may already be a customer)",
+      "est_containers_pm": 2,
+      "region": "Brisbane / Gold Coast / Toowoomba (also Melbourne)",
+      "city": "Archerfield",
       "address": "HQ: 947 Beaudesert Rd, Archerfield QLD 4108 (from 20 Apr 2026). Stores: Brendale, Molendinar (Gold Coast), Harristown (Toowoomba), Campbellfield VIC",
-      "phones": ["(07) 3800 1283", "0427 159 666 (Brendale)", "0481 852 666 (Gold Coast)", "0426 540 908 (Toowoomba)", "(03) 7044 6618 (Melbourne)"],
+      "phones": [
+        "(07) 3800 1283",
+        "0427 159 666 (Brendale)",
+        "0481 852 666 (Gold Coast)",
+        "0426 540 908 (Toowoomba)",
+        "(03) 7044 6618 (Melbourne)"
+      ],
       "email": "sales@stonegateindustries.com.au",
       "email_note": "Branch emails also published: northbrisbane@, gc@, toowoomba@, sales.vic@stonegateindustries.com.au",
       "website": "https://www.stonegateindustries.com.au",
@@ -72,17 +110,33 @@
       "cater": "A brand owner with five stores and its own reseller network. Pitch Innovatix as a build partner: we manufacture to their spec under the Stonegate brand, with certified steel they can market. Big volume potential.",
       "angle": "Private-label manufacturing partner: their brand, our factory, certified steel and pay-as-you-sell.",
       "opener": "Stonegate has built one of the best-known trailer brands in Queensland. I'd like to talk about building part of your range in our own factory, under your brand.",
-      "range_line": "box, cage, tandem and tradesman trailers",
+      "range_line": "box, cage, tandem and tradesman trailers and ute trays",
       "meeting": "at your Archerfield HQ",
-      "models": ["BX64", "BX85", "TD85", "TD126", "TR105", "TP106", "VAN74", "BT55"]
+      "models": [
+        "BX64",
+        "BX85",
+        "TD85",
+        "TD126",
+        "TR105",
+        "TP106",
+        "VAN74",
+        "BT55",
+        "UT"
+      ]
     },
     {
       "id": "trailers-down-under",
       "company": "Trailers Down Under",
-      "tier": 1, "priority": "High", "est_containers_pm": 1.5,
-      "region": "Logan / Brisbane South", "city": "Loganholme",
+      "tier": 1,
+      "priority": "High",
+      "est_containers_pm": 1.5,
+      "region": "Logan / Brisbane South",
+      "city": "Loganholme",
       "address": "14-22 Henry Street, Loganholme QLD 4129",
-      "phones": ["(07) 3806 2906", "1300 872 453"],
+      "phones": [
+        "(07) 3806 2906",
+        "1300 872 453"
+      ],
       "email": "info@trailersdownunder.com.au",
       "website": "https://trailersdownunder.com.au",
       "contact_name": null,
@@ -98,15 +152,28 @@
       "opener": "Trailers Down Under carries one of the widest ranges in South-East Queensland. I'd like to show you how we could supply part of it at a better landed cost.",
       "range_line": "galvanised box and cage trailers, car carriers and tippers",
       "meeting": "at your Loganholme yard",
-      "models": ["BX74", "CG85", "TD105", "CC45", "TP85", "VAN74", "ATV85"]
+      "models": [
+        "BX74",
+        "CG85",
+        "TD105",
+        "CC45",
+        "TP85",
+        "VAN74",
+        "ATV85"
+      ]
     },
     {
       "id": "toowoomba-trailers",
       "company": "Toowoomba Trailers",
-      "tier": 1, "priority": "High", "est_containers_pm": 0.75,
-      "region": "Darling Downs", "city": "Toowoomba",
+      "tier": 1,
+      "priority": "High",
+      "est_containers_pm": 0.75,
+      "region": "Darling Downs",
+      "city": "Toowoomba",
       "address": "2 Molloy Street, Toowoomba QLD 4350",
-      "phones": ["0402 519 137"],
+      "phones": [
+        "0402 519 137"
+      ],
       "email": "info@toowoombatrailers.com.au",
       "website": "https://www.toowoombatrailers.com.au",
       "contact_name": null,
@@ -121,15 +188,27 @@
       "opener": "I saw Toowoomba Trailers carries an imported range alongside your Australian-made and custom builds. I'd like to show you a better-documented option for that imported line.",
       "range_line": "galvanised box, plant and tipper trailers",
       "meeting": "in person in Toowoomba",
-      "models": ["BX85H", "TD126", "PL35", "TP106", "FT106", "ATV85"]
+      "models": [
+        "BX85H",
+        "TD126",
+        "PL35",
+        "TP106",
+        "FT106",
+        "ATV85"
+      ]
     },
     {
       "id": "dalby-trailers",
       "company": "Dalby Trailers",
-      "tier": 1, "priority": "Medium", "est_containers_pm": 0.5,
-      "region": "Darling Downs / Western Downs", "city": "Dalby",
+      "tier": 1,
+      "priority": "Medium",
+      "est_containers_pm": 0.5,
+      "region": "Darling Downs / Western Downs",
+      "city": "Dalby",
       "address": "15 Hospital Road, Dalby QLD 4405",
-      "phones": ["0483 909 007"],
+      "phones": [
+        "0483 909 007"
+      ],
       "email": null,
       "email_note": "No public email address. Use the website contact form or call.",
       "website": "https://dalbytrailers.com.au",
@@ -146,15 +225,30 @@
       "opener": "I saw Dalby Trailers both sells and hires galvanised trailers across the Western Downs. I'd like to show you a range built for both jobs.",
       "range_line": "galvanised cage, ATV and tipper trailers",
       "meeting": "in Dalby, or by video call if easier",
-      "models": ["CG74", "BX86H", "ATV85", "CC45", "TP85", "LS85"]
+      "models": [
+        "CG74",
+        "BX86H",
+        "ATV85",
+        "CC45",
+        "TP85",
+        "LS85"
+      ]
     },
     {
       "id": "trailers-direct",
       "company": "Trailers Direct",
-      "tier": 2, "priority": "Medium-High", "est_containers_pm": 1,
-      "region": "Gold Coast / Sunshine Coast", "city": "Molendinar",
+      "tier": 2,
+      "priority": "Medium-High",
+      "est_containers_pm": 1,
+      "region": "Gold Coast / Sunshine Coast",
+      "city": "Molendinar",
       "address": "62 Harper Street, Molendinar QLD 4214; Sunshine Coast branch at 191 Brisbane Road",
-      "phones": ["(07) 5531 0874", "0416 394 106", "(07) 5444 4610", "1300 866 869"],
+      "phones": [
+        "(07) 5531 0874",
+        "0416 394 106",
+        "(07) 5444 4610",
+        "1300 866 869"
+      ],
       "email": null,
       "email_note": "No public email address. Use the website contact form or call.",
       "website": "https://trailersdirectqld.com.au",
@@ -170,15 +264,27 @@
       "opener": "Trailers Direct has been selling trailers on the Gold Coast and Sunshine Coast for over 20 years. I'd like to show you a range that could add margin across both branches.",
       "range_line": "box, tradesman and lawn-mowing trailers",
       "meeting": "at your Molendinar branch",
-      "models": ["BX74", "BX85", "CG85", "TR105", "ATV85", "TD105"]
+      "models": [
+        "BX74",
+        "BX85",
+        "CG85",
+        "TR105",
+        "ATV85",
+        "TD105"
+      ]
     },
     {
       "id": "taylors-trailers",
       "company": "Taylors Trailers",
-      "tier": 2, "priority": "Medium", "est_containers_pm": 0.75,
-      "region": "Far North Queensland", "city": "Cairns",
+      "tier": 2,
+      "priority": "Medium",
+      "est_containers_pm": 0.75,
+      "region": "Far North Queensland",
+      "city": "Cairns",
       "address": "184 English Street, Manunda (Cairns) QLD 4870",
-      "phones": ["(07) 4032 1717"],
+      "phones": [
+        "(07) 4032 1717"
+      ],
       "email": null,
       "email_note": "No public email address on the site. Call, or use the contact page.",
       "website": "https://taylorstrailers.com.au",
@@ -194,15 +300,27 @@
       "opener": "Taylors Trailers carries both your own Cairns-built trailers and an affordable box-trailer range. I'd like to show you an option for that value tier.",
       "range_line": "value box trailers and galvanised boat trailers",
       "meeting": "by video call, or in person on our next far north trip",
-      "models": ["BX64", "BX74", "BX75", "CG74", "BT55", "TD105"]
+      "models": [
+        "BX64",
+        "BX74",
+        "BX75",
+        "CG74",
+        "BT55",
+        "TD105"
+      ]
     },
     {
       "id": "mackay-trailers",
       "company": "Mackay Trailers",
-      "tier": 2, "priority": "Medium", "est_containers_pm": 0.5,
-      "region": "Mackay", "city": "North Mackay",
+      "tier": 2,
+      "priority": "Medium",
+      "est_containers_pm": 0.5,
+      "region": "Mackay",
+      "city": "North Mackay",
       "address": "41 Malcomson Street, North Mackay QLD 4740",
-      "phones": ["(07) 4940 0722"],
+      "phones": [
+        "(07) 4940 0722"
+      ],
       "email": null,
       "email_note": "No public email address found. Call, or use the website contact page.",
       "website": "https://mackaytrailers.com.au",
@@ -218,15 +336,27 @@
       "opener": "Mackay Trailers carries one of the biggest ranges of standard box trailers in the region. I'd like to show you a heavy-duty galvanised range at a better margin.",
       "range_line": "standard box and tandem trailers",
       "meeting": "by video call, or in person on our next north Queensland trip",
-      "models": ["BX74", "BX85H", "TD85", "TD105", "TD126", "PL35"]
+      "models": [
+        "BX74",
+        "BX85H",
+        "TD85",
+        "TD105",
+        "TD126",
+        "PL35"
+      ]
     },
     {
       "id": "fnq-trailers",
       "company": "FNQ Trailers & Accessories",
-      "tier": 2, "priority": "Medium", "est_containers_pm": 0.5,
-      "region": "Far North Queensland", "city": "Edmonton (Cairns)",
+      "tier": 2,
+      "priority": "Medium",
+      "est_containers_pm": 0.5,
+      "region": "Far North Queensland",
+      "city": "Edmonton (Cairns)",
       "address": "97 Bruce Highway, Edmonton QLD 4869",
-      "phones": ["0418 100 557"],
+      "phones": [
+        "0418 100 557"
+      ],
       "email": null,
       "email_note": "No public email address. Call or use the website.",
       "website": "https://www.fnqtrailers.com.au",
@@ -242,36 +372,60 @@
       "opener": "FNQ Trailers sells and hires affordable trailers across the far north. I'd like to show you a fully galvanised range built for tropical conditions.",
       "range_line": "affordable box and cage trailers",
       "meeting": "by video call, or in person on our next far north trip",
-      "models": ["BX74", "CG74", "CG85", "TD105", "OR75"]
+      "models": [
+        "BX74",
+        "CG74",
+        "CG85",
+        "TD105",
+        "OR75"
+      ]
     },
     {
       "id": "titanium-trailers",
       "company": "Titanium Trailers & Accessories",
-      "tier": 2, "priority": "Medium", "est_containers_pm": 0.5,
-      "region": "Townsville", "city": "Garbutt",
+      "tier": 2,
+      "priority": "Medium",
+      "est_containers_pm": 0.5,
+      "region": "Townsville",
+      "city": "Garbutt",
       "address": "Unit 6, 66 Pilkington Street, Garbutt QLD 4814",
-      "phones": ["(07) 4410 9797"],
+      "phones": [
+        "(07) 4410 9797"
+      ],
       "email": null,
       "email_note": "No public email address found. Call, or use the website.",
       "website": "https://www.titaniumtraileraccessories.com.au",
       "contact_name": null,
       "sells": "Trailers and trailer accessories (detail not published on the pages we could read).",
-      "evidence": ["Yellow Pages: Trailers & Trailer Parts, Garbutt (Townsville)"],
+      "evidence": [
+        "Yellow Pages: Trailers & Trailer Parts, Garbutt (Townsville)"
+      ],
       "sourcing": "Not stated.",
       "cater": "Little public detail. Qualify on the phone first (volumes, top models, current source), then send the range proposal.",
       "angle": "Second supplier with better margin and no stock risk.",
       "opener": "I'm reaching out to a few trailer dealers in Townsville about a new range that's landing well with Queensland dealers.",
       "range_line": "box, cage and tandem trailers",
       "meeting": "by video call, or in person on our next north Queensland trip",
-      "models": ["BX74", "CG85", "TD105", "OR75", "BT55"]
+      "models": [
+        "BX74",
+        "CG85",
+        "TD105",
+        "OR75",
+        "BT55"
+      ]
     },
     {
       "id": "budget-trailers",
       "company": "Budget Trailers",
-      "tier": 2, "priority": "Medium", "est_containers_pm": 0.5,
-      "region": "Townsville", "city": "Garbutt",
+      "tier": 2,
+      "priority": "Medium",
+      "est_containers_pm": 0.5,
+      "region": "Townsville",
+      "city": "Garbutt",
       "address": "16 Hamill Street, Garbutt QLD 4814",
-      "phones": ["(07) 4775 1255"],
+      "phones": [
+        "(07) 4775 1255"
+      ],
       "email": "budgettrailers7@bigpond.com",
       "website": "https://www.budgettrailers.com.au",
       "contact_name": null,
@@ -286,15 +440,26 @@
       "opener": "Budget Trailers has supplied Townsville for over 16 years. I'd like to show you how we could take the standard sizes off your workshop so you can focus on the custom work.",
       "range_line": "standard galvanised and tandem trailers",
       "meeting": "by video call, or in person on our next north Queensland trip",
-      "models": ["BX74", "BX85", "TD105", "TD126", "CG85"]
+      "models": [
+        "BX74",
+        "BX85",
+        "TD105",
+        "TD126",
+        "CG85"
+      ]
     },
     {
       "id": "the-trailer-shop",
       "company": "The Trailer Shop (Yeomans Industries)",
-      "tier": 2, "priority": "Medium", "est_containers_pm": 0.5,
-      "region": "Bundaberg", "city": "Norville",
+      "tier": 2,
+      "priority": "Medium",
+      "est_containers_pm": 0.5,
+      "region": "Bundaberg",
+      "city": "Norville",
       "address": "4 Lester Street, Norville (Bundaberg) QLD 4670",
-      "phones": ["(07) 4152 0224"],
+      "phones": [
+        "(07) 4152 0224"
+      ],
       "email": "sales@thetrailershop.com.au",
       "website": "https://www.thetrailershop.com.au",
       "contact_name": null,
@@ -309,77 +474,127 @@
       "opener": "The Trailer Shop already supplies the parts and tipper kits Bundaberg builders rely on. I'd like to show you our flat-pack trailers and chassis, which fit naturally with that.",
       "range_line": "flat-pack box trailers, chassis and tipper bodies",
       "meeting": "in person in Bundaberg",
-      "models": ["BX74", "BX85", "TP85", "TD105", "CHS"]
+      "models": [
+        "BX74",
+        "BX85",
+        "TP85",
+        "TD105",
+        "CHS"
+      ]
     },
     {
       "id": "sunny-trailers",
       "company": "Sunny Trailers",
-      "tier": 2, "priority": "Medium-Low", "est_containers_pm": 0.5,
-      "region": "Sunshine Coast", "city": "Kunda Park",
+      "tier": 2,
+      "priority": "Medium-Low",
+      "est_containers_pm": 0.5,
+      "region": "Sunshine Coast",
+      "city": "Kunda Park",
       "address": "Unit 1, 82 Enterprise Street, Kunda Park QLD 4556",
-      "phones": ["0416 644 497", "(07) 5443 6924"],
+      "phones": [
+        "0416 644 497",
+        "(07) 5443 6924"
+      ],
       "email": null,
       "email_note": "Website (sunnytrailers.com.au) was not loading on 24 Nov 2026 and no email is published. Call.",
       "website": "http://www.sunnytrailers.com.au",
       "contact_name": null,
       "sells": "Standard box trailers through to hot-dip galvanised custom builds; trailer registration.",
-      "evidence": ["Directory: \"from standard box trailers to hot dipped galvanised custom-built trailers\", authorised to register trailers"],
+      "evidence": [
+        "Directory: \"from standard box trailers to hot dipped galvanised custom-built trailers\", authorised to register trailers"
+      ],
       "sourcing": "Not stated.",
       "cater": "Mostly custom and local. Offer standard sizes so they can sell entry-level trailers cheaply and keep the custom work.",
       "angle": "Entry-level range to win price-sensitive buyers without tying up their workshop.",
       "opener": "I'm reaching out to a few trailer businesses on the Sunshine Coast about a galvanised standard range that could sit alongside your custom builds.",
       "range_line": "standard galvanised box trailers",
       "meeting": "in person on the Sunshine Coast",
-      "models": ["BX64", "BX74", "BX75", "CG85"]
+      "models": [
+        "BX64",
+        "BX74",
+        "BX75",
+        "CG85"
+      ]
     },
     {
       "id": "austrailers",
       "company": "Austrailers Mfg (Qld)",
-      "tier": 3, "priority": "Low", "est_containers_pm": 0.5,
-      "region": "Brisbane North", "city": "Clontarf",
+      "tier": 3,
+      "priority": "Low",
+      "est_containers_pm": 0.5,
+      "region": "Brisbane North",
+      "city": "Clontarf",
       "address": "17 Huntington Street, Clontarf QLD 4019",
-      "phones": ["(07) 3284 8911", "(07) 3040 5192"],
+      "phones": [
+        "(07) 3284 8911",
+        "(07) 3040 5192"
+      ],
       "email": "sales@austrailersqld.com.au",
       "website": "https://austrailersqld.com.au",
       "contact_name": null,
       "sells": "Box trailers (on-road and off-road), heavy-duty tandems, car trailers 12-16ft, enclosed trailers, lawn-mowing trailers.",
-      "evidence": ["Website: \"high-quality, Australian made trailers Brisbane, Sunshine Coast and Gold Coast wide at factory direct prices\""],
+      "evidence": [
+        "Website: \"high-quality, Australian made trailers Brisbane, Sunshine Coast and Gold Coast wide at factory direct prices\""
+      ],
       "sourcing": "Australian manufacturer.",
       "cater": "Don't lead with China or quality. Offer a partnership: rolling chassis or a private-label entry-level line so they can compete with cheap imports without discounting their Australian-made trailers.",
       "angle": "Capacity and component partner, never a replacement for their Aussie-made line.",
       "opener": "Austrailers builds Australian-made trailers at factory-direct prices. I wanted to ask whether extra fabrication capacity or a price-fighter line would be useful as import competition heats up.",
       "range_line": "galvanised chassis and entry-level box trailers",
       "meeting": "at your Clontarf factory",
-      "models": ["CHS", "BX64", "BX74", "CC45"]
+      "models": [
+        "CHS",
+        "BX64",
+        "BX74",
+        "CC45"
+      ]
     },
     {
       "id": "australia-pacific-trailers",
       "company": "Australia Pacific Trailers",
-      "tier": 3, "priority": "Low", "est_containers_pm": 0.5,
-      "region": "Gold Coast / Rockhampton", "city": "Labrador + Allenstown",
+      "tier": 3,
+      "priority": "Low",
+      "est_containers_pm": 0.5,
+      "region": "Gold Coast / Rockhampton",
+      "city": "Labrador + Allenstown",
       "address": "24 Brisbane Road, Labrador QLD 4215; 17 Gladstone Road, Allenstown (Rockhampton) QLD 4700",
-      "phones": ["(07) 3137 9516", "0427 056 701"],
+      "phones": [
+        "(07) 3137 9516",
+        "0427 056 701"
+      ],
       "email": "daniel@australiapacifictrailers.com.au",
       "email_note": "Also info@australiapacifictrailers.com.au",
       "website": "https://australiapacifictrailers.com.au",
       "contact_name": "Daniel (email published on the Rockhampton contact block)",
       "sells": "Galvanised, car, custom, machinery and tipper trailers.",
-      "evidence": ["Website: \"we're 100% ... Australian made\", \"uses only high-quality Australian made materials\", family-owned, \"over a decade\""],
+      "evidence": [
+        "Website: \"we're 100% ... Australian made\", \"uses only high-quality Australian made materials\", family-owned, \"over a decade\""
+      ],
       "sourcing": "Australian manufacturer; markets Australian materials.",
       "cater": "Their brand rests on Australian materials, so an import pitch will fail. Only approach about overflow fabrication or a separately branded value range for their Rockhampton branch. Low probability.",
       "angle": "Overflow capacity or a separately branded value line.",
       "opener": "I'm reaching out to a few Queensland trailer manufacturers to ask whether extra fabrication capacity would help in busy periods.",
       "range_line": "galvanised chassis and machinery trailers",
       "meeting": "at your Gold Coast yard",
-      "models": ["CHS", "PL35", "TP106"]
+      "models": [
+        "CHS",
+        "PL35",
+        "TP106"
+      ]
     },
     {
       "id": "hans-trailers",
       "company": "Hans Trailers (Hans Group)",
-      "tier": 3, "priority": "Low", "est_containers_pm": 1,
-      "region": "Ipswich (stockists statewide)", "city": "Yamanto",
+      "tier": 3,
+      "priority": "Low",
+      "est_containers_pm": 1,
+      "region": "Ipswich (stockists statewide)",
+      "city": "Yamanto",
       "address": "330 Warwick Road, Yamanto (near Ipswich) QLD 4305",
-      "phones": ["1300 511 447", "(07) 3281 3055"],
+      "phones": [
+        "1300 511 447",
+        "(07) 3281 3055"
+      ],
       "email": null,
       "email_note": "No public email address. Use the contact form on hansgroup.com.au or call.",
       "website": "https://hansgroup.com.au",
@@ -395,71 +610,173 @@
       "opener": "Hans has built trailers in Queensland for 60 years. I'm reaching out to ask whether galvanised components or sub-assemblies from our steel fabrication plant could help with capacity.",
       "range_line": "galvanised chassis and sub-assemblies",
       "meeting": "at your Yamanto factory",
-      "models": ["CHS", "CAGE"]
+      "models": [
+        "CHS",
+        "CAGE"
+      ]
     },
     {
       "id": "sunshine-coast-trailers",
       "company": "Sunshine Coast Trailers",
-      "tier": 3, "priority": "Low", "est_containers_pm": 0.5,
-      "region": "Sunshine Coast", "city": "Palmview",
+      "tier": 3,
+      "priority": "Low",
+      "est_containers_pm": 0.5,
+      "region": "Sunshine Coast",
+      "city": "Palmview",
       "address": "102a Pignata Road, Palmview QLD 4553",
-      "phones": ["(07) 5494 5555"],
+      "phones": [
+        "(07) 5494 5555"
+      ],
       "email": "info@sunshinecoasttrailers.com.au",
       "website": "https://sunshinecoasttrailers.com.au",
       "contact_name": null,
       "sells": "Australian-made and custom-built trailers; trailer, caravan and horse float repairs and servicing; nationwide delivery.",
-      "evidence": ["Website: \"Proudly Australian Made\", \"Trusted Since 1972\""],
+      "evidence": [
+        "Website: \"Proudly Australian Made\", \"Trusted Since 1972\""
+      ],
       "sourcing": "Australian manufacturer.",
       "cater": "Established Australian builder. Pitch overflow capacity or chassis supply only.",
       "angle": "Capacity partner for standard sizes and chassis.",
       "opener": "Sunshine Coast Trailers has built trailers since 1972. I wanted to ask whether extra fabrication capacity for standard sizes would be useful.",
       "range_line": "galvanised chassis and standard box trailers",
       "meeting": "at your Palmview workshop",
-      "models": ["CHS", "BX74", "BX85"]
+      "models": [
+        "CHS",
+        "BX74",
+        "BX85"
+      ]
     },
     {
       "id": "topline-trailers",
       "company": "Topline Trailers",
-      "tier": 3, "priority": "Low", "est_containers_pm": 0.25,
-      "region": "Logan", "city": "Tanah Merah",
+      "tier": 3,
+      "priority": "Low",
+      "est_containers_pm": 0.25,
+      "region": "Logan",
+      "city": "Tanah Merah",
       "address": "1 Pintu Drive, Tanah Merah QLD 4128",
-      "phones": ["0499 116 339"],
+      "phones": [
+        "0499 116 339"
+      ],
       "email": "sales@toplinetrailers.com.au",
       "website": "https://toplinetrailers.com.au",
       "contact_name": null,
       "sells": "Custom, box, builders, car, enclosed, galvanised, lawn mower, machinery, motorbike, table-top and tandem box trailers.",
-      "evidence": ["Website: \"a locally owned and operated family business that designs and manufactures trailers\""],
+      "evidence": [
+        "Website: \"a locally owned and operated family business that designs and manufactures trailers\""
+      ],
       "sourcing": "Australian custom manufacturer.",
       "cater": "Small custom builder. Offer rolling chassis or standard sizes so they can quote faster and take on more jobs.",
       "angle": "Chassis and standard-size supply to grow output without hiring.",
       "opener": "Topline designs and builds custom trailers in Logan. I wanted to ask whether galvanised chassis or standard sizes from our factory could help you take on more work.",
       "range_line": "galvanised chassis and standard sizes",
       "meeting": "at your Tanah Merah workshop",
-      "models": ["CHS", "BX74", "TD105"]
+      "models": [
+        "CHS",
+        "BX74",
+        "TD105"
+      ]
     }
   ],
   "call_only": [
-    {"company": "Brisbane Trailers", "phone": "(07) 3277 9522", "address": "131 Boniface Street, Archerfield QLD 4108"},
-    {"company": "Kwik-Load Trailers", "phone": "(07) 3391 2008", "address": "7 Albion Street, Woolloongabba QLD 4102"},
-    {"company": "Trailers 2000 (Beerwah factory; also Arundel, Mackay, Rockhampton)", "phone": "(07) 5494 6711", "address": "10 Biondi Crescent, Beerwah QLD 4519", "note": "Australian Made licensee and supplies Bunnings. Website was down. Private-label or capacity angle only."},
-    {"company": "Trailers Now", "phone": "(07) 4194 5678", "address": "11 Industrial Avenue, Dundowran (Hervey Bay) QLD 4655"},
-    {"company": "Cambuilt Trailers & Parts", "phone": "(07) 4922 3760", "address": "Unit 1, 197 Kent Street, Rockhampton City QLD 4700"},
-    {"company": "Cairns Trailers", "phone": "(07) 4035 5556", "address": "56 Nelson Street, Bungalow (Cairns) QLD 4870"},
-    {"company": "Swiftco Trailers", "phone": "(07) 4755 0092", "address": "16 Langton Street, Garbutt (Townsville) QLD 4814"},
-    {"company": "Trailer Warehouse", "phone": "(07) 4696 1406", "address": "410 Cambooya Wyreema Road, Cambooya QLD 4358"},
-    {"company": "Rhino Trailers", "phone": "1300 474 466", "address": "57-75 Industrial Avenue, Wilsonton (Toowoomba) QLD 4350"},
-    {"company": "Lite Haul Trailers", "phone": "(07) 4693 7161", "address": "140 Tyson Road, Felton South QLD 4358"},
-    {"company": "FMS Trailers", "phone": "(07) 3279 7881", "address": "39 Huxham Street, Raceview (Ipswich) QLD 4305", "note": "Custom hot-dip galvanised builder."},
-    {"company": "Taipan Trailers", "phone": "(07) 3809 4466", "address": "86 Johnson Road, Hillcrest QLD 4118"},
-    {"company": "G & S Trailers", "phone": "(07) 3299 5585", "address": "Unit 3, 100 Kingston Road, Underwood QLD 4119"},
-    {"company": "Bargara Trailers", "phone": "0412 990 979", "address": "16 Francis Place, Innes Park QLD 4670"},
-    {"company": "Nathan Trailers (stockists statewide)", "phone": "(07) 4639 4400", "address": "12 Wylie Street, Toowoomba QLD 4350 (one of many listings)"}
+    {
+      "company": "Brisbane Trailers",
+      "phone": "(07) 3277 9522",
+      "address": "131 Boniface Street, Archerfield QLD 4108"
+    },
+    {
+      "company": "Kwik-Load Trailers",
+      "phone": "(07) 3391 2008",
+      "address": "7 Albion Street, Woolloongabba QLD 4102"
+    },
+    {
+      "company": "Trailers 2000 (Beerwah factory; also Arundel, Mackay, Rockhampton)",
+      "phone": "(07) 5494 6711",
+      "address": "10 Biondi Crescent, Beerwah QLD 4519",
+      "note": "Australian Made licensee and supplies Bunnings. Website was down. Private-label or capacity angle only."
+    },
+    {
+      "company": "Trailers Now",
+      "phone": "(07) 4194 5678",
+      "address": "11 Industrial Avenue, Dundowran (Hervey Bay) QLD 4655"
+    },
+    {
+      "company": "Cambuilt Trailers & Parts",
+      "phone": "(07) 4922 3760",
+      "address": "Unit 1, 197 Kent Street, Rockhampton City QLD 4700"
+    },
+    {
+      "company": "Cairns Trailers",
+      "phone": "(07) 4035 5556",
+      "address": "56 Nelson Street, Bungalow (Cairns) QLD 4870"
+    },
+    {
+      "company": "Swiftco Trailers",
+      "phone": "(07) 4755 0092",
+      "address": "16 Langton Street, Garbutt (Townsville) QLD 4814"
+    },
+    {
+      "company": "Trailer Warehouse",
+      "phone": "(07) 4696 1406",
+      "address": "410 Cambooya Wyreema Road, Cambooya QLD 4358"
+    },
+    {
+      "company": "Rhino Trailers",
+      "phone": "1300 474 466",
+      "address": "57-75 Industrial Avenue, Wilsonton (Toowoomba) QLD 4350"
+    },
+    {
+      "company": "Lite Haul Trailers",
+      "phone": "(07) 4693 7161",
+      "address": "140 Tyson Road, Felton South QLD 4358"
+    },
+    {
+      "company": "FMS Trailers",
+      "phone": "(07) 3279 7881",
+      "address": "39 Huxham Street, Raceview (Ipswich) QLD 4305",
+      "note": "Custom hot-dip galvanised builder."
+    },
+    {
+      "company": "Taipan Trailers",
+      "phone": "(07) 3809 4466",
+      "address": "86 Johnson Road, Hillcrest QLD 4118"
+    },
+    {
+      "company": "G & S Trailers",
+      "phone": "(07) 3299 5585",
+      "address": "Unit 3, 100 Kingston Road, Underwood QLD 4119"
+    },
+    {
+      "company": "Bargara Trailers",
+      "phone": "0412 990 979",
+      "address": "16 Francis Place, Innes Park QLD 4670"
+    },
+    {
+      "company": "Nathan Trailers (stockists statewide)",
+      "phone": "(07) 4639 4400",
+      "address": "12 Wylie Street, Toowoomba QLD 4350 (one of many listings)"
+    }
   ],
   "excluded": [
-    {"company": "Just Trailers (Rocklea, North Tivoli, Beenleigh)", "reason": "Markets itself as 100% Australian made and openly criticises imported trailers. An import pitch would backfire."},
-    {"company": "Trailerworld (Slacks Creek)", "reason": "Website: \"made onsite using Australian steel, and not imported from overseas\"."},
-    {"company": "Tuff Trailers (Crestmead)", "reason": "Heavy transport (low loaders, step decks). Not our light-trailer product."},
-    {"company": "Kara Kar Trailers", "reason": "Australian-made horse floats only."},
-    {"company": "Trailer Sales, Haulmark, Drake, Shephard Transport Equipment", "reason": "Semi-trailers and heavy transport equipment."}
+    {
+      "company": "Just Trailers (Rocklea, North Tivoli, Beenleigh)",
+      "reason": "Markets itself as 100% Australian made and openly criticises imported trailers. An import pitch would backfire."
+    },
+    {
+      "company": "Trailerworld (Slacks Creek)",
+      "reason": "Website: \"made onsite using Australian steel, and not imported from overseas\"."
+    },
+    {
+      "company": "Tuff Trailers (Crestmead)",
+      "reason": "Heavy transport (low loaders, step decks). Not our light-trailer product."
+    },
+    {
+      "company": "Kara Kar Trailers",
+      "reason": "Australian-made horse floats only."
+    },
+    {
+      "company": "Trailer Sales, Haulmark, Drake, Shephard Transport Equipment",
+      "reason": "Semi-trailers and heavy transport equipment."
+    }
   ]
 }
