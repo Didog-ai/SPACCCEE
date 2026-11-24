@@ -51,21 +51,23 @@ MODELS = {
 WHY_DEALER = [
     ("Certified steel", "Mill certificates and welder certifications supplied, so you can check the steel and the welds yourself."),
     ("Fully hot-dip galvanised", "Every complete trailer is fully galvanised for Queensland's coast and conditions."),
-    ("Built to Australian rules", "Built to the Australian Design Rules (ADRs) and supplied with a VIN."),
+    ("ADR and CTA approved", "ADR-approved drawbars for trailers up to 3500 kg and CTA-approved couplings up to 3500 kg. VINs supplied if you need them."),
     ("Factory-direct price", "Our own factory, no trader in between. Landed below comparable imports."),
     ("Pay as you sell", "Flexible credit terms: you can pay for trailers as they sell."),
-    ("Low-risk start", "Mixed-model containers, a trial container, or a sample unit to inspect first."),
-    ("Your spec, your brand", "We build to your drawings and can supply under your own brand."),
+    ("Mix any container", "Different trailers in one container, plus extra parts if you build or repair locally."),
+    ("Our designs, or yours", "Choose from our own proven designs, or make yours unique with custom features, depending on volume."),
+    ("Low-risk start", "Start with a trial container, or a sample unit to inspect first."),
 ]
 WHY_BUILDER = [
     ("Extra capacity", "Galvanised chassis, sub-assemblies or standard sizes built to your drawings."),
     ("Certified steel", "Mill certificates and welder certifications supplied with every batch."),
     ("Your brand stays yours", "Supplied unbranded or under a separate value brand, so your own line is untouched."),
-    ("Built to Australian rules", "Complete trailers built to the ADRs and supplied with a VIN."),
-    ("Flexible terms", "Mixed loads and flexible credit terms."),
+    ("ADR and CTA approved", "ADR-approved drawbars and CTA-approved couplings for trailers up to 3500 kg. VINs supplied if needed."),
+    ("Parts in any container", "Mix complete trailers with drawbars, couplings, chassis and spare parts for your workshop."),
+    ("Flexible terms", "Flexible credit terms, and custom features to suit your designs based on volume."),
 ]
 STEPS = [
-    ("Choose your mix", "Pick models and quantities for one container. Mixed loads are fine."),
+    ("Choose your mix", "Mix any trailers in one container and add extra parts. Custom features available based on volume."),
     ("We build and ship", "Built and galvanised in our factory, flat-packed to fit more trailers per container."),
     ("Assemble and sell", "Assembly guide supplied. Parts and warranty support in Australia."),
     ("Pay as they sell", "Flexible credit terms agreed up front."),
@@ -86,9 +88,10 @@ def email_for(p: dict) -> dict:
         bullets = [
             "Galvanised chassis, sub-assemblies or complete standard trailers built to your drawings",
             "Certified steel and welds, with mill certificates and welder certifications supplied",
-            "Built to ADRs and VIN-plated when supplied as complete trailers",
+            "ADR-approved drawbars and CTA-approved couplings for trailers up to 3500 kg, with VINs supplied if needed",
+            "Mixed containers: complete trailers plus extra parts and components for your workshop",
             "Supplied unbranded or under a separate brand, so your Australian-made line stays separate",
-            "Mixed loads and flexible credit terms",
+            "Custom features to suit your designs, depending on volume, and flexible credit terms",
         ]
         lead = "Here's what we can offer a builder like you:"
         intro = ("I'm with Innovatix. We're a steel fabrication company with our own factory in India, "
@@ -106,12 +109,14 @@ def email_for(p: dict) -> dict:
             lead = "Here's why dealers are adding us as a second supplier:"
         bullets = [
             "Higher-grade, certified steel: we supply mill certificates and welder certifications so you can check it yourself",
-            "Fully hot-dip galvanised, built to ADRs and VIN-plated",
+            "Fully hot-dip galvanised",
+            "ADR-approved drawbars and CTA-approved couplings for trailers up to 3500 kg, with VINs supplied if you need them",
             "Factory-direct pricing, landed below comparable Chinese imports",
             "Flexible credit terms: you can pay as the trailers sell",
-            "Mixed-model containers and a trial container, so you can test us without the risk",
+            "Mixed containers: different trailers in one load, plus extra parts if you build or repair locally",
+            "A trial container or sample unit, so you can test us without the risk",
             "Dependable lead times straight from our own factory, with no trader in the middle",
-            "Built to your spec, or under your own brand",
+            "Our own proven designs, or custom features to make yours unique, depending on volume",
         ]
     body = "\n".join([
         greet, "",
@@ -223,8 +228,10 @@ def catalogue_html(p: dict) -> str:
       <div class="row"><span>Finish</span><span>Hot-dip galvanised</span></div>
       <div class="row"><span>Steel</span><span>Mill-certified</span></div>
       <div class="row"><span>Welding</span><span>Certified welders</span></div>
-      <div class="row"><span>Compliance</span><span>ADR · VIN plated</span></div>
-      <div class="row"><span>Supply</span><span>Flat-pack · mixed loads</span></div>
+      <div class="row"><span>Drawbars</span><span>ADR approved · to 3500 kg</span></div>
+      <div class="row"><span>Couplings</span><span>CTA approved · to 3500 kg</span></div>
+      <div class="row"><span>VIN</span><span>Supplied if needed</span></div>
+      <div class="row"><span>Supply</span><span>Mixed loads · extra parts</span></div>
     </div>
   </div>
   <div class="spangle" style="background-image:url('{ASSETS}/enclosed-trailer-side-door-ramp.jpg')">
@@ -284,7 +291,7 @@ def catalogue_html(p: dict) -> str:
   <p>We'll walk through this range, bring a weld sample and the mill certificates, and price your top models
   landed in {esc(p['city'])}. Reply to the email this came with to lock in a time.</p></div>
   <div class="fine"><span>Specifications are indicative. Final dimensions, ATM, componentry and dealer pricing are confirmed on quotation.
-  Complete trailers are built to the Australian Design Rules and supplied with a VIN.</span><span>Page 5</span></div>
+  Drawbars are ADR approved and couplings CTA approved for trailers up to 3500 kg ATM. VINs supplied on request.</span><span>Page 5</span></div>
 </section>
 </body></html>"""
 

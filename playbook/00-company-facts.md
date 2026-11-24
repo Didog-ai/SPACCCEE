@@ -9,8 +9,9 @@ The bot treats this file as the truth about Innovatix. Keep it current. Anything
 | What we are | Steel fabrication business with our own factory in India. We manufacture trailers and export them to Australia. |
 | Product range | All trailer types: box, tandem, cage/tradie, car carrier, plant/equipment, flatbed, tipper, off-road/camper, boat, custom builds. Nothing is ruled out. |
 | How it ships | Flat-packed in shipping containers. Each container carries the trailers plus all loose parts for assembly in Australia. |
-| Mixed loads | Yes. One container can hold a mix of models. |
-| Compliance | Trailers are built to Australian Design Rules (ADRs) and carry VINs. |
+| Mixed loads | Yes. One container can hold a mix of different trailers, plus extra parts for local manufacturers. |
+| Compliance | ADR approvals for drawbars on trailers up to 3500 kg. CTA approvals for couplings up to 3500 kg. VINs can be provided if needed. |
+| Designs | Our own trailer designs, and custom features to make a dealer's design unique, depending on volume. |
 | Price | Landed price per trailer is well below comparable Chinese imports. |
 | Proof available | Steel grade documentation, mill certificates, welder certifications, galvanising specs, photos, test reports, and testimonials from current customers. (No ISO certificate, and we don't need one to sell.) |
 | Trials | We can send sample units, or one container on trial terms. |
