@@ -79,6 +79,9 @@ td.c { font-family: var(--mono); white-space: nowrap; color: var(--accent); }
 .btns { display: flex; gap: 8px; flex-wrap: wrap; }
 button.copy { font: 600 13px var(--body); border: 1px solid var(--accent); color: var(--accent); background: transparent; border-radius: 8px; padding: 6px 10px; cursor: pointer; }
 button.copy.done { background: var(--accent); color: var(--accent-fg); }
+a.pdf { display: inline-block; font: 600 14px var(--body); color: var(--accent-fg); background: var(--accent); border-radius: 8px; padding: 7px 12px; text-decoration: none; }
+a.pdf:hover { filter: brightness(1.08); }
+a.pdf:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
 .tablewrap table { font-size: 14px; } .tablewrap td, .tablewrap th { padding: 10px 12px; }
 .section { margin-top: 40px; display: grid; gap: 12px; }
@@ -179,7 +182,9 @@ function card(p) {
       <section>
         <div><div class="lbl">How we cater to them</div><div style="font-size:14px">${esc(p.cater)}</div></div>
         <div><div class="lbl">Pitch angle</div><div style="font-size:14px;font-weight:600">${esc(p.angle)}</div></div>
-        <div><div class="lbl">Range proposal (attached PDF: ${esc(e.attachment)})</div>
+        <div><div class="lbl">Range proposal</div>
+          <a class="pdf" href="catalogues/${esc(e.attachment)}" target="_blank" rel="noopener">Open range proposal (PDF) ↗</a>
+          <div style="color:var(--muted);font-size:13px;margin:4px 0 8px">${esc(e.attachment)}${p.email ? ' · also attached to the Gmail draft' : ''}</div>
           <table><thead><tr><th>Model</th><th>Trailer</th><th>ATM</th></tr></thead><tbody>${models}</tbody></table></div>
         <div class="mail"><div class="lbl">Meeting email ${p.email ? '· saved as a Gmail draft with the PDF attached' : '· not in Gmail (no public email): paste into their web form or send after your call'}</div>
           <div class="subj">${esc(e.subject)}</div><pre>${esc(e.body)}</pre>
