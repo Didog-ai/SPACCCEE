@@ -18,7 +18,7 @@ OUT = HERE / "out"
 ASSETS = "../../assets"  # product photos, relative to out/catalogues/
 DATA = json.loads((HERE / "prospects.json").read_text(encoding="utf-8"))
 
-# Indicative Innovatix range. Final spec, ATM and pricing are confirmed on quote.
+# Indicative Pinnacle Trailers range. Final spec, ATM and pricing are confirmed on quote.
 MODELS = {
     "BX64":  ("6x4 Box Trailer", "Single axle", "1830 x 1220 mm deck, 300 mm sides", "750 kg", "The everyday domestic seller."),
     "BX74":  ("7x4 Box Trailer", "Single axle", "2130 x 1220 mm deck, 300 mm sides", "750 kg", "Highest-volume size for most yards."),
@@ -38,6 +38,8 @@ MODELS = {
     "TP85":  ("8x5 Hydraulic Tipper", "Tandem axle, braked", "Electric-hydraulic tipping body", "2000 kg", "Soil, gravel and green waste."),
     "TP106": ("10x6 Hydraulic Tipper", "Tandem axle, electric brakes", "Electric-hydraulic tipping body, 600 mm sides", "3500 kg", "Civil and landscaping crews."),
     "FT106": ("10x6 Flat Top / Drop Side", "Tandem axle, electric brakes", "Drop sides, rated tie-downs", "3500 kg", "Pallets, machinery, farm loads."),
+    "LM85":  ("8x5 Lawn Mowing / Gardening Trailer", "Single axle", "Enclosed mower box with gas-strut side door, fold-down side ramp, rear barn doors, twin loading ramps", "to suit", "Mowing contractors and landscapers."),
+    "GB":    ("Golf Buggy Trailer", "Single axle", "Tilt deck, fold-down checker-plate rear ramp, checker-plate guards", "750 kg", "Golf buggies, ride-on mowers and small vehicles."),
     "ATV85": ("8x5 ATV / Mower Trailer", "Single axle", "Full-width fold-down ramp, tilt body", "750 kg (1400 kg braked option)", "Mowers, quads and side-by-sides."),
     "VAN74": ("7x4 Enclosed Van Trailer", "Single axle", "Lockable, rear barn doors", "750 kg", "Secure storage for trades and events."),
     "BT55":  ("Galvanised Boat Trailer", "Single or tandem axle", "Multi-roller, boats to 5.5 m", "750-1400 kg", "Salt-water ready."),
@@ -50,7 +52,7 @@ MODELS = {
 
 WHY_DEALER = [
     ("Certified steel", "Mill certificates and welder certifications supplied, so you can check the steel and the welds yourself."),
-    ("Fully hot-dip galvanised", "Every complete trailer is fully galvanised for Queensland's coast and conditions."),
+    ("Galvanised or painted", "Hot-dip galvanised for coastal and heavy use, or a tough painted finish for golf buggy and specialty trailers."),
     ("ADR and CTA approved", "ADR-approved drawbars for trailers up to 3500 kg and CTA-approved couplings up to 3500 kg. VINs supplied if you need them."),
     ("Factory-direct price", "Our own factory, no trader in between. Landed below comparable imports."),
     ("Pay as you sell", "Flexible credit terms: you can pay for trailers as they sell."),
@@ -68,7 +70,7 @@ WHY_BUILDER = [
 ]
 STEPS = [
     ("Choose your mix", "Mix any trailers in one container and add extra parts. Custom features available based on volume."),
-    ("We build and ship", "Built and galvanised in our factory, flat-packed to fit more trailers per container."),
+    ("We build and ship", "Built and finished in our factory, flat-packed to fit more trailers per container."),
     ("Assemble and sell", "Assembly guide supplied. Parts and warranty support in Australia."),
     ("Pay as they sell", "Flexible credit terms agreed up front."),
 ]
@@ -94,12 +96,12 @@ def email_for(p: dict) -> dict:
             "Custom features to suit your designs, depending on volume, and flexible credit terms",
         ]
         lead = "Here's what we can offer a builder like you:"
-        intro = ("I'm with Innovatix. We're a steel fabrication company with our own factory in India, "
+        intro = ("I'm with Pinnacle Trailers. We're a steel fabrication company with our own factory in India, "
                  "and we supply galvanised trailers and components to Queensland trailer businesses.")
     else:
         subject = f"Galvanised trailer supply for {p['company'].split(' (')[0]}: 30-minute meeting?"
-        intro = ("I'm with Innovatix. We're a steel fabrication company with our own factory in India, and we build "
-                 "fully hot-dip galvanised trailers that ship flat-packed to Australian dealers. Several Queensland "
+        intro = ("I'm with Pinnacle Trailers. We're a steel fabrication company with our own factory in India, and we build "
+                 "galvanised and painted trailers that ship flat-packed to Australian dealers. Several Queensland "
                  "dealers already stock our range, and the response has been very strong.")
         if p["id"] in ("wide-bay", "toowoomba-trailers"):
             lead = "Here's why dealers are moving their imported range to us:"
@@ -109,7 +111,7 @@ def email_for(p: dict) -> dict:
             lead = "Here's why dealers are adding us as a second supplier:"
         bullets = [
             "Higher-grade, certified steel: we supply mill certificates and welder certifications so you can check it yourself",
-            "Fully hot-dip galvanised",
+            "Hot-dip galvanised or tough painted finishes",
             "ADR-approved drawbars and CTA-approved couplings for trailers up to 3500 kg, with VINs supplied if you need them",
             "Factory-direct pricing, landed below comparable Chinese imports",
             "Flexible credit terms: you can pay as the trailers sell",
@@ -139,7 +141,7 @@ def email_for(p: dict) -> dict:
         "Thursday 3 December work, or is there a better time for you?</p><p>Kind regards,</p>"
     )
     return {"id": p["id"], "to": p.get("email"), "subject": subject, "body": body, "html": html_body,
-            "attachment": f"Innovatix-Range-{p['id']}.pdf"}
+            "attachment": f"Pinnacle-Trailers-Range-{p['id']}.pdf"}
 
 
 # ---- dealer catalogue -----------------------------------------------------------
@@ -155,14 +157,13 @@ h1, h2, h3 { font-family: 'Inter Display', Inter, sans-serif; margin: 0; letter-
 .mono { font-family: 'JetBrains Mono', monospace; }
 .cover { background: var(--ink); color: #fff; padding: 0; display: flex; flex-direction: column; }
 .cover .top { padding: 18mm 16mm 0; }
-.brand { font-family: 'Inter Display'; font-weight: 800; font-size: 13pt; letter-spacing: .22em; }
-.brand span { color: var(--mark); }
+.logo { height: 20mm; width: auto; display: block; }
 .cover h1 { font-size: 34pt; line-height: 1.05; font-weight: 800; margin-top: 46mm; max-width: 150mm; }
 .cover .for { margin-top: 8mm; font-size: 13pt; color: #c5d3dc; }
 .cover .for b { color:#fff; }
-.cover h1 { margin-top: 20mm; }
-.spangle { margin-top: auto; height: 132mm; background-size: cover; background-position: center 72%; position: relative; }
-.spangle::after { content: "Galvanised enclosed tradie trailer, built in our factory"; position: absolute; right: 16mm; bottom: 6mm;
+.cover h1 { margin-top: 14mm; }
+.spangle { margin-top: auto; height: 112mm; background-size: cover; background-position: center 72%; position: relative; }
+.spangle::after { content: "Galvanised 8x5 lawn mowing trailer, built in our factory"; position: absolute; right: 16mm; bottom: 6mm;
   font-family: 'JetBrains Mono'; font-size: 7.5pt; color: #fff; background: rgba(22,35,45,.72); padding: 1mm 2mm; border-radius: 1mm; }
 .proof { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4mm 3mm; }
 .proof figure { margin: 0; }
@@ -171,11 +172,13 @@ h1, h2, h3 { font-family: 'Inter Display', Inter, sans-serif; margin: 0; letter-
 .proof .sm img { height: 62mm; }
 .proof .big { grid-column: span 4; } .proof .side { grid-column: span 2; } .proof .side img { height: 100mm; }
 .proof .sm { grid-column: span 2; }
+.proof .full { grid-column: span 6; } .proof .full img { height: 72mm; }
+.proof .g img { height: 64mm; }
 .proof .half { grid-column: span 3; } .proof .half img { height: 70mm; }
 .proof figcaption { font-size: 8pt; color: var(--muted); margin-top: 1.5mm; line-height: 1.35; }
 .proof figcaption b { color: var(--ink); font-weight: 600; }
 .lede2 { color: var(--muted); max-width: 150mm; margin: -3mm 0 6mm; }
-.plate { margin-top: 9mm; background: #f4f6f7; color: var(--ink); border-radius: 2mm;
+.plate { margin-top: 7mm; background: #f4f6f7; color: var(--ink); border-radius: 2mm;
   padding: 5mm 6mm; width: 92mm; }
 .plate .row { display:flex; justify-content: space-between; font-family:'JetBrains Mono'; font-size: 8.5pt; padding: 1mm 0; border-bottom: .2mm solid var(--zinc2); }
 .plate .row:last-child { border-bottom: 0; }
@@ -211,21 +214,21 @@ def catalogue_html(p: dict) -> str:
     rows = []
     for code in p["models"]:
         name, axle, deck, atm, use = MODELS[code]
-        rows.append(f"<tr><td class='code'>INX-{esc(code)}</td><td><div class='nm'>{esc(name)}</div>"
+        rows.append(f"<tr><td class='code'>PT-{esc(code)}</td><td><div class='nm'>{esc(name)}</div>"
                     f"<div class='sub'>{esc(axle)} · {esc(deck)}</div></td><td class='atm'>{esc(atm)}</td>"
                     f"<td class='sub'>{esc(use)}</td></tr>")
     company = esc(p["company"])
     title = "Galvanised capacity, built to your drawings" if builder else "A better-built trailer range, landed for less"
-    return f"""<!doctype html><html><head><meta charset="utf-8"><title>Innovatix range for {company}</title>
+    return f"""<!doctype html><html><head><meta charset="utf-8"><title>Pinnacle Trailers range for {company}</title>
 <style>{CAT_CSS}</style></head><body>
 <section class="page cover">
   <div class="top">
-    <div class="brand">INNOVATIX<span>.</span></div>
+    <img class="logo" src="{ASSETS}/pinnacle-logo-white.png" alt="Pinnacle Trailers">
     <h1>{esc(title)}</h1>
     <div class="for">Range proposal prepared for <b>{company}</b>, {esc(p['city'])}</div>
     <div class="plate">
       <div class="hd">BUILD SPECIFICATION</div>
-      <div class="row"><span>Finish</span><span>Hot-dip galvanised</span></div>
+      <div class="row"><span>Finish</span><span>Galvanised or painted</span></div>
       <div class="row"><span>Steel</span><span>Mill-certified</span></div>
       <div class="row"><span>Welding</span><span>Certified welders</span></div>
       <div class="row"><span>Drawbars</span><span>ADR approved · to 3500 kg</span></div>
@@ -238,14 +241,14 @@ def catalogue_html(p: dict) -> str:
   </div>
 </section>
 <section class="page">
-  <div class="eyebrow">Why Innovatix</div>
+  <div class="eyebrow">Why Pinnacle Trailers</div>
   <h2>{'A fabrication partner, not a competitor' if builder else 'Built in our own factory. Proven on paper.'}</h2>
   <div class="why">{''.join(f'<div><b>{esc(a)}</b>{esc(b)}</div>' for a, b in why)}</div>
   <div class="note"><b>See it before you commit.</b> We'll bring a weld cut-section and the mill certificates to our
   meeting, and can send a sample unit or a trial container so you can judge the quality and sell-through yourself.</div>
   <div class="eyebrow" style="margin-top:10mm">How it works</div>
   <div class="steps">{''.join(f'<div><span class="n">STEP {i}</span><b>{esc(a)}</b>{esc(b)}</div>' for i, (a, b) in enumerate(STEPS, 1))}</div>
-  <div class="fine"><span>Innovatix · range proposal for {company}</span><span>Page 2</span></div>
+  <div class="fine"><span>Pinnacle Trailers · range proposal for {company}</span><span>Page 2</span></div>
 </section>
 <section class="page">
   <div class="eyebrow">Proof of work · galvanised trailers</div>
@@ -254,7 +257,7 @@ def catalogue_html(p: dict) -> str:
   supplies our Queensland and Victorian dealers. Every panel, frame and drawbar is hot-dip galvanised.</p>
   <div class="proof">
     <figure class="big"><img src="{ASSETS}/enclosed-trailer-side-door-ramp.jpg" alt="Galvanised enclosed trailer, three-quarter view with side door and ramp open">
-      <figcaption><b>Enclosed tradie trailer.</b> Fully galvanised body and A-frame drawbar, gas-strut side access door, fold-down checker-plate side ramp.</figcaption></figure>
+      <figcaption><b>8x5 lawn mowing / gardening trailer.</b> Fully galvanised, enclosed mower box with gas-strut side door and fold-down checker-plate side ramp, A-frame drawbar.</figcaption></figure>
     <figure class="side"><img src="{ASSETS}/enclosed-trailer-loading-ramps.jpg" alt="Galvanised trailer with twin loading ramps">
       <figcaption><b>Twin loading ramps.</b> Checker-plate ramps for mowers, quads and equipment.</figcaption></figure>
     <figure class="sm"><img src="{ASSETS}/enclosed-trailer-rear-doors-open.jpg" alt="Galvanised trailer with rear barn doors open">
@@ -264,7 +267,24 @@ def catalogue_html(p: dict) -> str:
     <figure class="sm"><img src="{ASSETS}/galvanised-highside-trailer.jpg" alt="Galvanised high-side trailer, rear view with doors closed">
       <figcaption><b>Closed up.</b> Lockable twin barn doors and LED combination lamps.</figcaption></figure>
   </div>
-  <div class="fine"><span>Innovatix · range proposal for {company}</span><span>Page 3</span></div>
+  <div class="fine"><span>Pinnacle Trailers · range proposal for {company}</span><span>Page 3</span></div>
+</section>
+<section class="page">
+  <div class="eyebrow">Proof of work · golf buggy trailers</div>
+  <h2>Golf buggy trailers, ready for the course.</h2>
+  <p class="lede2">Tilt-deck golf buggy trailers with a full-width fold-down ramp, checker-plate guards and a tough painted finish.
+  Built in our factory and supplied to Australian dealers.</p>
+  <div class="proof">
+    <figure class="full"><img src="{ASSETS}/golf-buggy-trailer-side.jpg" alt="Golf buggy trailer side view">
+      <figcaption><b>Golf buggy trailer.</b> Single axle, tilt deck, checker-plate guards, jockey wheel and safety chains.</figcaption></figure>
+    <figure class="sm g"><img src="{ASSETS}/golf-buggy-trailer-rear-3q.jpg" alt="Golf buggy trailer from the rear">
+      <figcaption><b>Rear view.</b> Checker-plate deck and tailgate ramp, LED combination lamps, rear stand wheels.</figcaption></figure>
+    <figure class="sm g"><img src="{ASSETS}/golf-buggy-trailer-ramp-down.jpg" alt="Golf buggy trailer with ramp lowered" style="object-position: 40% 50%">
+      <figcaption><b>Ramp down.</b> Full-width ramp for driving the buggy straight on.</figcaption></figure>
+    <figure class="sm g"><img src="{ASSETS}/golf-buggy-trailer-tilt-front.jpg" alt="Golf buggy trailer with deck tilted" style="object-position: 62% 50%">
+      <figcaption><b>Tilt deck.</b> Body tilts for easy loading without a winch.</figcaption></figure>
+  </div>
+  <div class="fine"><span>Pinnacle Trailers · range proposal for {company}</span><span>Page 4</span></div>
 </section>
 <section class="page">
   <div class="eyebrow">Proof of work · steel ute trays</div>
@@ -280,7 +300,7 @@ def catalogue_html(p: dict) -> str:
     <figure class="half"><img src="{ASSETS}/ute-tray-flatdeck.jpg" alt="Flat-deck tray ready for dispatch">
       <figcaption><b>Flat deck.</b> Checker-plate floor, finished and ready to ship.</figcaption></figure>
   </div>
-  <div class="fine"><span>Innovatix · range proposal for {company}</span><span>Page 4</span></div>
+  <div class="fine"><span>Pinnacle Trailers · range proposal for {company}</span><span>Page 5</span></div>
 </section>
 <section class="page">
   <div class="eyebrow">Proposed range for {company}</div>
@@ -291,7 +311,7 @@ def catalogue_html(p: dict) -> str:
   <p>We'll walk through this range, bring a weld sample and the mill certificates, and price your top models
   landed in {esc(p['city'])}. Reply to the email this came with to lock in a time.</p></div>
   <div class="fine"><span>Specifications are indicative. Final dimensions, ATM, componentry and dealer pricing are confirmed on quotation.
-  Drawbars are ADR approved and couplings CTA approved for trailers up to 3500 kg ATM. VINs supplied on request.</span><span>Page 5</span></div>
+  Drawbars are ADR approved and couplings CTA approved for trailers up to 3500 kg ATM. VINs supplied on request.</span><span>Page 6</span></div>
 </section>
 </body></html>"""
 

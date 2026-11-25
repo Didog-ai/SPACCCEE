@@ -10,7 +10,7 @@ const browser = await chromium.launch();
 const page = await browser.newPage();
 for (const f of readdirSync(dir).filter((f) => f.endsWith('.html'))) {
   await page.goto('file://' + join(dir, f));
-  await page.pdf({ path: join(dir, `Innovatix-Range-${f.replace('.html', '')}.pdf`), format: 'A4', printBackground: true });
+  await page.pdf({ path: join(dir, `Pinnacle-Trailers-Range-${f.replace('.html', '')}.pdf`), format: 'A4', printBackground: true });
   console.log('pdf', f);
 }
 await browser.close();
