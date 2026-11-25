@@ -79,9 +79,18 @@ td.c { font-family: var(--mono); white-space: nowrap; color: var(--accent); }
 .btns { display: flex; gap: 8px; flex-wrap: wrap; }
 button.copy { font: 600 13px var(--body); border: 1px solid var(--accent); color: var(--accent); background: transparent; border-radius: 8px; padding: 6px 10px; cursor: pointer; }
 button.copy.done { background: var(--accent); color: var(--accent-fg); }
-a.pdf { display: inline-block; font: 600 14px var(--body); color: var(--accent-fg); background: var(--accent); border-radius: 8px; padding: 7px 12px; text-decoration: none; }
-a.pdf:hover { filter: brightness(1.08); }
-a.pdf:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.view { font: 600 14px var(--body); color: var(--accent-fg); background: var(--accent); border: 0; border-radius: 8px; padding: 8px 14px; cursor: pointer; }
+button.view:hover { filter: brightness(1.08); }
+button.view:focus-visible, .viewer button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.viewer { position: fixed; inset: 0; z-index: 50; background: rgba(10, 16, 20, .86); overflow-y: auto;
+  padding: calc(env(safe-area-inset-top, 0px) + 56px) max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px)); }
+.viewer .bar { position: fixed; top: 0; left: 0; right: 0; z-index: 51; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: var(--surface); color: var(--fg); border-bottom: 1px solid var(--line);
+  padding: calc(env(safe-area-inset-top, 0px) + 10px) max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px)); }
+.viewer .bar b { font-family: var(--display); font-size: 18px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.viewer .bar button { font: 600 14px var(--body); border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 8px; padding: 6px 12px; cursor: pointer; flex: none; }
+.viewer .pages { max-width: 820px; margin: 0 auto; display: grid; gap: 14px; }
+.viewer img { width: 100%; height: auto; display: block; border-radius: 4px; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,.35); }
 .tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
 .tablewrap table { font-size: 14px; } .tablewrap td, .tablewrap th { padding: 10px 12px; }
 .section { margin-top: 40px; display: grid; gap: 12px; }
@@ -135,6 +144,10 @@ a.pdf:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   <p class="lede" style="margin-top:32px" id="method"></p>
 </div>
 
+<div class="viewer" id="viewer" hidden role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+  <div class="bar"><b id="viewer-title"></b><button type="button" id="viewer-close">Close</button></div>
+  <div class="pages" id="viewer-pages"></div>
+</div>
 <script>
 const PACK = /*__PACK__*/null;
 const P = PACK.data.prospects, E = PACK.emails, M = PACK.models;
@@ -183,8 +196,8 @@ function card(p) {
         <div><div class="lbl">How we cater to them</div><div style="font-size:14px">${esc(p.cater)}</div></div>
         <div><div class="lbl">Pitch angle</div><div style="font-size:14px;font-weight:600">${esc(p.angle)}</div></div>
         <div><div class="lbl">Range proposal</div>
-          <a class="pdf" href="catalogues/${esc(e.attachment)}" target="_blank" rel="noopener">Open range proposal (PDF) ↗</a>
-          <div style="color:var(--muted);font-size:13px;margin:4px 0 8px">${esc(e.attachment)}${p.email ? ' · also attached to the Gmail draft' : ''}</div>
+          <button class="view" type="button" data-view="${esc(p.id)}">View range proposal</button>
+          <div style="color:var(--muted);font-size:13px;margin:6px 0 8px">6 pages, made for ${esc(p.company)}. The PDF file (${esc(e.attachment)}) is ${p.email ? 'attached to the Gmail draft and ' : ''}in the zip of all proposals.</div>
           <table><thead><tr><th>Model</th><th>Trailer</th><th>ATM</th></tr></thead><tbody>${models}</tbody></table></div>
         <div class="mail"><div class="lbl">Meeting email ${p.email ? '· saved as a Gmail draft with the PDF attached' : '· not in Gmail (no public email): paste into their web form or send after your call'}</div>
           <div class="subj">${esc(e.subject)}</div><pre>${esc(e.body)}</pre>
@@ -207,7 +220,20 @@ document.querySelectorAll('.chip').forEach((b) => b.addEventListener('click', ()
   filter = b.dataset.f; document.querySelectorAll('.chip').forEach((c) => c.setAttribute('aria-pressed', String(c === b))); render();
 }));
 document.getElementById('q').addEventListener('input', render);
+const viewer = document.getElementById('viewer');
+function openViewer(id) {
+  const p = P.find((x) => x.id === id); if (!p) return;
+  document.getElementById('viewer-title').textContent = 'Range proposal · ' + p.company;
+  document.getElementById('viewer-pages').innerHTML = [1, 2, 3, 4, 5, 6].map((n) =>
+    `<img src="previews/${encodeURIComponent(id)}-p${n}.jpg" alt="Page ${n} of the range proposal for ${esc(p.company)}" loading="lazy" width="1112" height="1572">`).join('');
+  viewer.hidden = false; viewer.scrollTop = 0; document.body.style.overflow = 'hidden';
+  document.getElementById('viewer-close').focus();
+}
+function closeViewer() { viewer.hidden = true; document.body.style.overflow = ''; }
+document.getElementById('viewer-close').addEventListener('click', closeViewer);
+document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape' && !viewer.hidden) closeViewer(); });
 document.getElementById('list').addEventListener('click', (ev) => {
+  const v = ev.target.closest('button.view'); if (v) { openViewer(v.dataset.view); return; }
   const b = ev.target.closest('button.copy'); if (!b) return;
   const e = E[b.dataset.k]; copy(b, b.dataset.what === 'subject' ? e.subject : e.body);
 });
