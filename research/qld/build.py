@@ -15,7 +15,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
-ASSETS = "../../assets"  # product photos, relative to out/catalogues/
+ASSETS = "../assets"  # print-sized product photos (made by web_assets()), relative to out/catalogues/
 DATA = json.loads((HERE / "prospects.json").read_text(encoding="utf-8"))
 
 # Indicative Pinnacle Trailers range. Final spec, ATM and pricing are confirmed on quote.
@@ -344,7 +344,22 @@ def write_csv(prospects: list[dict]) -> None:
                         "next_action": "Qualifying call", "next_action_date": "2026-12-01"})
 
 
+def web_assets() -> None:
+    """Copy photos into out/assets, resized for print so each PDF stays email-friendly."""
+    from PIL import Image
+    dst = OUT / "assets"
+    dst.mkdir(parents=True, exist_ok=True)
+    for src in (HERE / "assets").iterdir():
+        im = Image.open(src)
+        if src.suffix.lower() == ".png":
+            im.save(dst / src.name)
+            continue
+        im.thumbnail((1000, 1000))
+        im.convert("RGB").save(dst / src.name, quality=72, optimize=True)
+
+
 def main() -> None:
+    web_assets()
     (OUT / "catalogues").mkdir(parents=True, exist_ok=True)
     prospects = DATA["prospects"]
     emails = []
