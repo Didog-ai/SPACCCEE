@@ -23,6 +23,7 @@ The bot **never sends anything or contacts anyone**. Emails and messages are sav
 | [07-credit-and-risk](playbook/07-credit-and-risk.md) | Protecting pay-when-sold stock (PPSR, limits, warning signs) |
 | [08-weekly-operating-rhythm](playbook/08-weekly-operating-rhythm.md) | Weekly targets and the routine |
 | [09-expansion](playbook/09-expansion.md) | The next product (livestock handling equipment) and the next country (New Zealand), with the research behind them |
+| [10-business-model](playbook/10-business-model.md) | The lean way to scale: factory-direct containers, one stocking partner per country, contract customers, no owned warehouses |
 
 ## Setup (once)
 
