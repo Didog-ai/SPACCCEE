@@ -34,6 +34,14 @@ Owning warehouses also makes us the retailer's warehouse, which competes with th
 - **Volume pricing** per order: 1, 3, 5 and 10+ containers, plus an **annual rebate** for hitting a yearly volume. This rewards commitment without us holding stock.
 - **Rolling forecast:** big customers give a 3-month forecast, with month 1 firm. The factory plans steel buying and production from it.
 
+**Delivery terms: the buyer collects at the port.**
+- Default price is **CIF to the buyer's nearest main port** (for example Brisbane, Melbourne, Sydney, Fremantle, Adelaide, Auckland or Hull). We book and pay the sea freight and cargo insurance. Risk passes to the buyer when the container is loaded in India.
+- The buyer's customs broker clears it and pays the duty (usually 0% under the trade deals), import GST/VAT and port charges. The buyer trucks it to their yard, unpacks it and returns the empty container within the shipping line's free days.
+- **We keep control until paid:** the shipping line releases the container only when we release the bill of lading (or a telex release). We do that only when the balance is paid.
+- For first-time importers, offer **delivered to their yard (DAP)** as an add-on through our freight forwarder, at cost plus a margin. The buyer still clears customs and pays GST/VAT.
+- **Avoid DDP** (delivered with duty paid). It makes us the importer of record in each country, with the tax registration and legal liability that brings.
+- Every container must meet the destination's biosecurity rules: clean steel, ISPM-15 treated timber, and a clean container. Australia and NZ inspect strictly.
+
 ### 2. One stocking partner per country (the warehouse we don't own)
 
 Small dealers can't take a whole container. Instead of our own warehouse:
