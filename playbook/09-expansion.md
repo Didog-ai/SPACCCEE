@@ -162,3 +162,25 @@ Researched November 2026. Australia is the anchor. New Zealand is next. After Ne
 - US RV forecast: https://www.rvia.org/rv-roadsigns-quarterly-forecast
 - US tariff proposal on India: https://www.business-standard.com/economy/news/us-proposes-up-to-25-tariff-on-india-offers-17-upon-trade-deal-126112501255_1.html
 - South Africa camping trailers: https://deepmarketinsights.com/vista/insights/camping-trailer-market/south-africa
+
+### UK: chassis or trailers? (owner asked, November 2026)
+
+**Holiday-home (static caravan and lodge) chassis are the better UK operation.** Don't go into UK road trailers.
+
+| | Holiday-home chassis | Road trailers |
+|---|---|---|
+| Road approval | None: units are moved on low-loaders and built to BS 3632 / NCC Code of Practice 501 | GB type approval needed; our ADR/CTA approvals don't count |
+| Buyers | About a dozen factories, most clustered around Hull, East Yorkshire (Willerby, Swift, ABI, Victory, Carnaby, Delta and others) | Many small dealers and farm stores, a strong local market leader, and buyers who expect a UK parts and warranty network |
+| Competition | One dominant supplier (AL-KO, formerly Bankside Patterson), so the factories want a second source | Established UK brands plus imports from Belgium, Poland, Germany and China |
+| Our edge | Fully galvanised chassis are the spec for coastal parks. That's our strength. | Price only |
+| Value per sale | One large, high-value chassis per home, in factory volumes | Low value per unit, sold one at a time |
+
+**Risks to solve before quoting:**
+- Length: chassis are often longer than a 40 ft container (about 12 m inside). Ship as a kit of main beams and cross-members, assembled in the UK, or use flat racks.
+- Just-in-time supply: the factories expect weekly delivery. Hold buffer stock in a Hull-area warehouse.
+- Standards: confirm with the NCC and one manufacturer what BS 3632 / CoP 501 testing a new chassis supplier needs.
+- Volume data: the latest UK holiday-home dispatch figures we found are from 2017, at about 21,000-22,000 units a year. Get 2025 figures from the NCC.
+
+**First move:** visit 3-4 of the smaller Hull-area builders and offer a trial batch of fully galvanised lodge or pod chassis as a second source.
+
+Sources: https://ep.alko-tech.com/bankside-patterson, https://www.alko-tech.com/en_gb/Vehicle-types-products/Chassis-for-holiday-homes, https://www.willerby.com/?p=7390, https://www.thencc.org.uk/industry-statistics/holiday-caravan/, https://statista.com/statistics/505354/caravan-holiday-home-products-manufactured-united-kingdom-uk, https://corpsignals.uk/hscode/871640.html
