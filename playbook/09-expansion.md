@@ -4,10 +4,12 @@ Researched November 2026. Re-check the sources before committing money: tariff a
 
 ## The answer
 
+> **Owner decision (November 2026): caravan chassis is the next product.** The country order for chassis is in "Caravan chassis: where to take it" at the end of this file. The livestock analysis below stays as the runner-up option.
+
 | Question | Recommendation |
 |---|---|
-| **1. Next steel product** | **Hot-dip galvanised livestock handling equipment**: cattle and sheep yard panels, gates, crushes with headbails, loading ramps and portable yard kits. |
-| **2. Country to focus on** | **New Zealand** as the new country. Australia stays the core market (we use only 4 of 20 containers a month of capacity). Sell the new livestock range into Australia and New Zealand together. |
+| **1. Next steel product** | **Caravan chassis** (owner's decision). Research runner-up: hot-dip galvanised livestock handling equipment. |
+| **2. Country order** | Australia (anchor) → New Zealand → UK → Canada (once a trade deal is signed) → USA (watch list). |
 
 ## What we can already make (the starting point)
 
@@ -122,3 +124,41 @@ Any new product should use the same machines, the same steel, the same galvanisi
 - Panel prices: https://australag.au/products/cattle-panel-6-bar-40mm-x-40mm and https://farmtender.com.au/listing/livestock-equipment/cattle-yards/heavy-duty-steel-cattle-panels---brand-new
 - Pre-galvanised vs hot-dip after fabrication: https://www.tepari.com/au/permanent-steel-cattle-yards/ and https://farmstyle.com.au/comment/1347
 - Australian anti-dumping on hollow sections: https://www.industry.gov.au/trade/anti-dumping-review-panel/current-anti-dumping-review-panel-reviews/hollow-structural-sections-exported-australia-peoples-republic-china-republic-korea-malaysia-and-taiwan
+
+## Caravan chassis: where to take it
+
+Researched November 2026. Australia is the anchor. New Zealand is next. After New Zealand, in priority order:
+
+| # | Country | Duty on Indian trailers/chassis | Market | Main obstacle | Verdict |
+|---|---|---|---|---|---|
+| 0 | **Australia** | Free (ECTA) | 18,438 caravans built locally in 2025 (up 7.3%), each needing a chassis. Local builders are squeezed by Chinese caravan imports and need cheaper chassis. | Chassis must meet ADRs and each builder's drawings | **Start here.** We already hold ADR drawbar and coupling approvals. |
+| 1 | **New Zealand** | Free (FTA in force 20 Oct 2026) | Small caravan-building base. Better for trailers. | Small volume | Sell chassis to the few NZ builders on the same trips as trailers. |
+| 2 | **United Kingdom** | **0%** on HS 8716 from India (CETA in force 15 July 2026) | 98% of UK touring caravans are built in the UK by a small group of large makers. There is also a large holiday-home (static caravan) sector. | Touring chassis are dominated by lightweight European chassis brands, and touring sales are falling. Road trailers need GB type approval. | **The best market after NZ, with zero duty.** Lead with **holiday-home (static) chassis**, which aren't towed on the road, and off-road campers. Don't chase touring caravan chassis first. |
+| 3 | **Canada** | No FTA yet. India-Canada CEPA talks aim to finish by end-2026. Non-FTA countries face steel quotas with a 50% surtax over quota, plus a 25% surtax on listed steel derivative goods. | Small RV-building base, mostly supplied from the US | Tariff uncertainty and Transport Canada manufacturer rules | **Wait for CEPA.** If signed, move it up. Check whether HS 8716 is on Canada's derivative surtax list. |
+| 4 | **USA** | 10% now. USTR proposed up to 25% (17% with a trade deal) on 25 Nov 2026. Section 232 proposal adds trailers at 15-25% of full value. | The biggest RV market in the world, but 2026 shipments are forecast at about 290,000, down sharply, with towables falling fastest. | Tariffs stack up, the market is in a downturn, and the big chassis supplier uses US steel and is part of the US RV supply chain | **Watch list.** Re-check once the India-US deal is signed and the Section 232 trailer decision is final. |
+
+**Not on the list:** EU (CBAM from 2028 and type approval; the big German caravan makers are tied to established chassis suppliers). South Africa (strong off-road caravan culture with about 72 local builders, but the camping-trailer market is only about US$71 million).
+
+### Why this order
+
+1. **Duty first.** A chassis is mostly steel and labour. A 15-25% tariff on full value wipes out our price advantage. Australia, NZ and the UK are duty-free; Canada and the US are not.
+2. **Then compliance we already have.** ADR approvals transfer straight to Australian builders. The UK is the first market that needs new approvals, and static chassis avoid most of that.
+3. **Then the number of buyers we can reach.** Australia has many mid-size builders. The UK has a few large ones. That's slower to win but each win is big.
+4. **The US is the biggest prize but the worst timing.** Keep it as an option, not a plan.
+
+### Triggers to change the order
+
+- India-Canada CEPA signed with steel derivatives duty-free → move Canada to #2.
+- India-US deal signed **and** trailers left out of Section 232 → put the US ahead of Canada.
+- UK holiday-home chassis trial order won → double down on the UK before Canada.
+
+### Sources (chassis)
+
+- Australian caravan production 2025: https://www.caravanindustry.com.au/state-of-the-industry-2026-resilience-in-a-changing-market/
+- UK tourers built by NCC members: https://www.thencc.org.uk/industry-statistics/tourer
+- UK tariff on Indian goods (HS 8716 at 0%): https://assets.publishing.service.gov.uk/media/696f482bc1f2c97b3f70f867/The_India_Preferential_Tariff_Reference_Document_v1.0.docx
+- Canada steel quotas and surtax: https://globaltaxnews.ey.com/news/2026-1505-canada-extends-steel-tariff-measures-for-an-additional-year and https://www.canada.ca/en/department-finance/news/2025/12/list-of-steel-derivative-products-subject-to-25-per-cent-tariffs-effective-december-26-2025.html
+- India-Canada CEPA: https://www.canada.ca/en/global-affairs/news/2026/09/canada-advances-trade-talks-on-comprehensive-economic-partnership-agreement-with-india.html
+- US RV forecast: https://www.rvia.org/rv-roadsigns-quarterly-forecast
+- US tariff proposal on India: https://www.business-standard.com/economy/news/us-proposes-up-to-25-tariff-on-india-offers-17-upon-trade-deal-126112501255_1.html
+- South Africa camping trailers: https://deepmarketinsights.com/vista/insights/camping-trailer-market/south-africa
