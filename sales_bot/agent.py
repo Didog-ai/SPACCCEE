@@ -23,7 +23,7 @@ ROLE = f"""You are the sales manager for Innovatix, a steel fabrication business
 that manufactures trailers and exports them flat-packed in shipping containers to Australia.
 
 Your mission: grow sales from about {BASELINE_CONTAINERS:g} containers a month to {TARGET_CONTAINERS:g}, \
-by winning new Australian buyers (trailer dealers and wholesalers first, then manufacturers, hire fleets, \
+by winning new buyers in Australia and New Zealand (trailer dealers and wholesalers first, then manufacturers, hire fleets, \
 rural/ag, caravan/camper/boat dealers, fleet buyers and government) and growing existing accounts.
 
 You work with the owner, who is the only salesperson: they visit dealers, make calls and attend shows. \

@@ -1,6 +1,9 @@
-"""Build the QLD dealer sales pack from prospects.json.
+"""Build a market's dealer sales pack from <market>/prospects.json.
 
-Outputs (in research/qld/out/):
+Usage: python3 research/qld/build.py [market_dir]   (default: research/qld; e.g. research/nz)
+Market-specific wording lives in prospects.json under "market"; photos, brochure design and models are shared.
+
+Outputs (in <market_dir>/out/):
   catalogues/<id>.html   dealer-facing range proposal (rendered to PDF by render_pdfs.mjs)
   emails.json            meeting-request email per dealer
   qld_prospects.csv      import into the bot's CRM: python -m sales_bot import research/qld/out/qld_prospects.csv
@@ -13,16 +16,50 @@ import html
 import json
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-OUT = HERE / "out"
+import sys
+
+HERE = Path(__file__).resolve().parent          # shared: photos, template, models
+MARKET_DIR = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else HERE
+OUT = MARKET_DIR / "out"
 ASSETS = "../assets"  # print-sized product photos (made by web_assets()), relative to out/catalogues/
-DATA = json.loads((HERE / "prospects.json").read_text(encoding="utf-8"))
+DATA = json.loads((MARKET_DIR / "prospects.json").read_text(encoding="utf-8"))
+
+# Market wording. Queensland is the default; other markets override keys in prospects.json "market".
+M = {
+    "code": "QLD",
+    "title": "QLD Dealer Hit List",
+    "eyebrow": "Pinnacle Trailers · Queensland prospecting · researched 24 Nov 2026",
+    "lede_who": "Trailer businesses across Queensland we can approach",
+    "warn_customers": "We don't know who your existing QLD wholesalers are. Stonegate in particular has QLD and Melbourne stores, so it could already be a customer.",
+    "call_note": "These came from Yellow Pages with a phone number but no website we could read.",
+    "intro_dealer": ("I'm with Pinnacle Trailers. We're a steel fabrication company with our own factory in India, and we build "
+                     "galvanised and painted trailers that ship flat-packed to Australian dealers. Several Queensland "
+                     "dealers already stock our range, and the response has been very strong."),
+    "intro_builder": ("I'm with Pinnacle Trailers. We're a steel fabrication company with our own factory in India, "
+                      "and we supply galvanised trailers and components to Queensland trailer businesses."),
+    "builder_local": "Australian-made",
+    "compliance_bullet": "ADR-approved drawbars and CTA-approved couplings for trailers up to 3500 kg, with VINs supplied if you need them",
+    "builder_compliance_bullet": "ADR-approved drawbars and CTA-approved couplings for trailers up to 3500 kg, with VINs supplied if needed",
+    "extra_bullets": [],
+    "why_compliance": ("ADR and CTA approved", "ADR-approved drawbars for trailers up to 3500 kg and CTA-approved couplings up to 3500 kg. VINs supplied if you need them."),
+    "why_price": ("Factory-direct price", "Our own factory, no trader in between. Landed below comparable imports."),
+    "plate_vin": "Supplied if needed",
+    "support": "Assembly guide supplied. Parts and warranty support in Australia.",
+    "proof_lede": "supplies our Queensland and Victorian dealers",
+    "fine_compliance": "Drawbars are ADR approved and couplings CTA approved for trailers up to 3500 kg ATM. VINs supplied on request.",
+    "bring": "and bring a weld cut-section and our mill certificates so you can see the build quality first-hand.",
+    "meeting_ask": "Would Tuesday 1 or Thursday 3 December work, or is there a better time for you?",
+    "csv": "qld_prospects.csv",
+    "source": "Yellow Pages QLD, Nov 2026",
+}
+M.update(DATA.get("market", {}))
 
 # Indicative Pinnacle Trailers range. Final spec, ATM and pricing are confirmed on quote.
 MODELS = {
     "BX64":  ("6x4 Box Trailer", "Single axle", "1830 x 1220 mm deck, 300 mm sides", "750 kg", "The everyday domestic seller."),
     "BX74":  ("7x4 Box Trailer", "Single axle", "2130 x 1220 mm deck, 300 mm sides", "750 kg", "Highest-volume size for most yards."),
     "BX75":  ("7x5 Box Trailer", "Single axle", "2130 x 1520 mm deck, 300 mm sides", "750 kg", "Wider deck for garden and tip runs."),
+    "BX84":  ("8x4 Box Trailer", "Single axle", "2440 x 1220 mm deck, 300 mm sides", "750 kg", "A top-selling size in New Zealand."),
     "BX85":  ("8x5 Box Trailer", "Single axle", "2440 x 1520 mm deck, 300 mm sides", "750 kg", "Popular all-rounder."),
     "BX85H": ("8x5 Heavy-Duty Box", "Single axle, braked", "2440 x 1520 mm deck, 400 mm sides", "1400 kg", "For trades and farm work."),
     "BX86H": ("8x6 Heavy-Duty Box", "Single axle, braked", "2440 x 1830 mm deck, 400 mm sides", "1400 kg", "Big-volume single axle."),
@@ -53,8 +90,8 @@ MODELS = {
 WHY_DEALER = [
     ("Certified steel", "Mill certificates and welder certifications supplied, so you can check the steel and the welds yourself."),
     ("Galvanised or painted", "Hot-dip galvanised for coastal and heavy use, or a tough painted finish for golf buggy and specialty trailers."),
-    ("ADR and CTA approved", "ADR-approved drawbars for trailers up to 3500 kg and CTA-approved couplings up to 3500 kg. VINs supplied if you need them."),
-    ("Factory-direct price", "Our own factory, no trader in between. Landed below comparable imports."),
+    tuple(M["why_compliance"]),
+    tuple(M["why_price"]),
     ("Pay as you sell", "Flexible credit terms: you can pay for trailers as they sell."),
     ("Mix any container", "Different trailers in one container, plus extra parts if you build or repair locally."),
     ("Our designs, or yours", "Choose from our own proven designs, or make yours unique with custom features, depending on volume."),
@@ -71,7 +108,7 @@ WHY_BUILDER = [
 STEPS = [
     ("Choose your mix", "Mix any trailers in one container and add extra parts. Custom features available based on volume."),
     ("We build and ship", "Built and finished in our factory, flat-packed to fit more trailers per container."),
-    ("Assemble and sell", "Assembly guide supplied. Parts and warranty support in Australia."),
+    ("Assemble and sell", M["support"]),
     ("Pay as they sell", "Flexible credit terms agreed up front."),
 ]
 
@@ -90,20 +127,19 @@ def email_for(p: dict) -> dict:
         bullets = [
             "Galvanised chassis, sub-assemblies or complete standard trailers built to your drawings",
             "Certified steel and welds, with mill certificates and welder certifications supplied",
-            "ADR-approved drawbars and CTA-approved couplings for trailers up to 3500 kg, with VINs supplied if needed",
+            M["builder_compliance_bullet"],
             "Mixed containers: complete trailers plus extra parts and components for your workshop",
-            "Supplied unbranded or under a separate brand, so your Australian-made line stays separate",
+            f"Supplied unbranded or under a separate brand, so your {M['builder_local']} line stays separate",
             "Custom features to suit your designs, depending on volume, and flexible credit terms",
         ]
         lead = "Here's what we can offer a builder like you:"
-        intro = ("I'm with Pinnacle Trailers. We're a steel fabrication company with our own factory in India, "
-                 "and we supply galvanised trailers and components to Queensland trailer businesses.")
+        intro = M["intro_builder"]
     else:
         subject = f"Galvanised trailer supply for {p['company'].split(' (')[0]}: 30-minute meeting?"
-        intro = ("I'm with Pinnacle Trailers. We're a steel fabrication company with our own factory in India, and we build "
-                 "galvanised and painted trailers that ship flat-packed to Australian dealers. Several Queensland "
-                 "dealers already stock our range, and the response has been very strong.")
-        if p["id"] in ("wide-bay", "toowoomba-trailers"):
+        intro = M["intro_dealer"]
+        if p.get("lead"):
+            lead = p["lead"]
+        elif p.get("confirmed_import") or p["id"] in ("wide-bay", "toowoomba-trailers"):
             lead = "Here's why dealers are moving their imported range to us:"
         elif p["tier"] == 1:
             lead = "If some of your range comes from Chinese suppliers, here's why dealers are moving that volume to us:"
@@ -112,33 +148,34 @@ def email_for(p: dict) -> dict:
         bullets = [
             "Higher-grade, certified steel: we supply mill certificates and welder certifications so you can check it yourself",
             "Hot-dip galvanised or tough painted finishes",
-            "ADR-approved drawbars and CTA-approved couplings for trailers up to 3500 kg, with VINs supplied if you need them",
+            M["compliance_bullet"],
             "Factory-direct pricing, landed below comparable Chinese imports",
+            *M["extra_bullets"],
             "Flexible credit terms: you can pay as the trailers sell",
             "Mixed containers: different trailers in one load, plus extra parts if you build or repair locally",
             "A trial container or sample unit, so you can test us without the risk",
             "Dependable lead times straight from our own factory, with no trader in the middle",
             "Our own proven designs, or custom features to make yours unique, depending on volume",
         ]
+    if p.get("fleet"):
+        bullets = ["Fleet pricing and flexible credit terms" if b.startswith("Flexible credit terms") else b for b in bullets]
+    sell = p.get("range_phrase", "you already sell")
+    ask = M["meeting_ask"]
     body = "\n".join([
         greet, "",
         p["opener"], "",
         intro, "",
         lead,
         *[f"- {b}" for b in bullets], "",
-        f"I've attached a short range proposal built around the {p['range_line']} you already sell, with photos of recent builds from our factory.", "",
-        f"Could we find 30 minutes in the next couple of weeks? I'm happy to meet {p['meeting']} and bring a weld "
-        "cut-section and our mill certificates so you can see the build quality first-hand. Would Tuesday 1 or "
-        "Thursday 3 December work, or is there a better time for you?", "",
+        f"I've attached a short range proposal built around the {p['range_line']} {sell}, with photos of recent builds from our factory.", "",
+        f"Could we find 30 minutes in the next couple of weeks? I'm happy to meet {p['meeting']} {M['bring']} {ask}", "",
         "Kind regards,",
     ])
     html_body = (
         f"<p>{esc(greet)}</p><p>{esc(p['opener'])}</p><p>{esc(intro)}</p><p>{esc(lead)}</p><ul>"
         + "".join(f"<li>{esc(b)}</li>" for b in bullets)
-        + f"</ul><p>I've attached a short range proposal built around the {esc(p['range_line'])} you already sell, with photos of recent builds from our factory.</p>"
-        f"<p>Could we find 30 minutes in the next couple of weeks? I'm happy to meet {esc(p['meeting'])} and bring a "
-        "weld cut-section and our mill certificates so you can see the build quality first-hand. Would Tuesday 1 or "
-        "Thursday 3 December work, or is there a better time for you?</p><p>Kind regards,</p>"
+        + f"</ul><p>I've attached a short range proposal built around the {esc(p['range_line'])} {esc(sell)}, with photos of recent builds from our factory.</p>"
+        f"<p>Could we find 30 minutes in the next couple of weeks? I'm happy to meet {esc(p['meeting'])} {esc(M['bring'])} {esc(ask)}</p><p>Kind regards,</p>"
     )
     return {"id": p["id"], "to": p.get("email"), "subject": subject, "body": body, "html": html_body,
             "attachment": f"Pinnacle-Trailers-Range-{p['id']}.pdf"}
@@ -233,7 +270,7 @@ def catalogue_html(p: dict) -> str:
       <div class="row"><span>Welding</span><span>Certified welders</span></div>
       <div class="row"><span>Drawbars</span><span>ADR approved · to 3500 kg</span></div>
       <div class="row"><span>Couplings</span><span>CTA approved · to 3500 kg</span></div>
-      <div class="row"><span>VIN</span><span>Supplied if needed</span></div>
+      <div class="row"><span>VIN</span><span>{esc(M["plate_vin"])}</span></div>
       <div class="row"><span>Supply</span><span>Mixed loads · extra parts</span></div>
     </div>
   </div>
@@ -254,7 +291,7 @@ def catalogue_html(p: dict) -> str:
   <div class="eyebrow">Proof of work · galvanised trailers</div>
   <h2>Built in our factory. Already working for Australian dealers.</h2>
   <p class="lede2">Recent builds photographed at our factory before dispatch, from the same production line that
-  supplies our Queensland and Victorian dealers. Every panel, frame and drawbar is hot-dip galvanised.</p>
+  {esc(M["proof_lede"])}. Every panel, frame and drawbar is hot-dip galvanised.</p>
   <div class="proof">
     <figure class="big"><img src="{ASSETS}/enclosed-trailer-side-door-ramp.jpg" alt="Galvanised enclosed trailer, three-quarter view with side door and ramp open">
       <figcaption><b>8x5 lawn mowing / gardening trailer.</b> Fully galvanised, enclosed mower box with gas-strut side door and fold-down checker-plate side ramp, A-frame drawbar.</figcaption></figure>
@@ -304,14 +341,14 @@ def catalogue_html(p: dict) -> str:
 </section>
 <section class="page">
   <div class="eyebrow">Proposed range for {company}</div>
-  <h2>Matched to the {esc(p['range_line'])} you already sell</h2>
+  <h2>Matched to the {esc(p['range_line'])} {esc(p.get('range_phrase', 'you already sell'))}</h2>
   <table><thead><tr><th>Model</th><th>Description</th><th>ATM</th><th>Best for</th></tr></thead>
   <tbody>{''.join(rows)}</tbody></table>
   <div class="cta"><h3>Next step: a 30-minute meeting</h3>
   <p>We'll walk through this range, bring a weld sample and the mill certificates, and price your top models
   landed in {esc(p['city'])}. Reply to the email this came with to lock in a time.</p></div>
   <div class="fine"><span>Specifications are indicative. Final dimensions, ATM, componentry and dealer pricing are confirmed on quotation.
-  Drawbars are ADR approved and couplings CTA approved for trailers up to 3500 kg ATM. VINs supplied on request.</span><span>Page 6</span></div>
+  {esc(M["fine_compliance"])}</span><span>Page 6</span></div>
 </section>
 </body></html>"""
 
@@ -322,15 +359,15 @@ def write_csv(prospects: list[dict]) -> None:
     cols = ["company", "segment", "state", "city", "website", "phone", "email", "contact_name", "source", "stage",
             "est_containers_per_month", "fit_score", "pain_points", "notes", "next_action", "next_action_date"]
     fit = {1: 8, 2: 6, 3: 4}
-    with open(OUT / "qld_prospects.csv", "w", newline="", encoding="utf-8") as f:
+    with open(OUT / M["csv"], "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=cols)
         w.writeheader()
         for p in prospects:
             w.writerow({
                 "company": p["company"], "segment": "trailer_manufacturer" if p["tier"] == 3 else "trailer_dealer",
-                "state": "QLD", "city": p["city"], "website": p["website"], "phone": p["phones"][0],
+                "state": M["code"], "city": p["city"], "website": p["website"], "phone": p["phones"][0],
                 "email": p.get("email") or "", "contact_name": p.get("contact_name") or "",
-                "source": f"QLD research {DATA['researched_on']}: {p['website']}", "stage": "researched",
+                "source": f"{M['code']} research {DATA['researched_on']}: {p['website']}", "stage": "researched",
                 "est_containers_per_month": p["est_containers_pm"], "fit_score": fit[p["tier"]],
                 "pain_points": p["sourcing"],
                 "notes": f"Tier {p['tier']} ({p['priority']}). Angle: {p['angle']} | {p['cater']}",
@@ -338,8 +375,8 @@ def write_csv(prospects: list[dict]) -> None:
                 "next_action_date": "2026-11-26",
             })
         for c in DATA["call_only"]:
-            w.writerow({"company": c["company"], "segment": "trailer_dealer", "state": "QLD", "phone": c["phone"],
-                        "source": "Yellow Pages QLD, Nov 2026", "stage": "new", "fit_score": 5,
+            w.writerow({"company": c["company"], "segment": c.get("segment", "trailer_dealer"), "state": M["code"], "phone": c["phone"],
+                        "source": M["source"], "stage": "new", "fit_score": 5,
                         "notes": f"{c['address']}. {c.get('note', '')} Phone-qualify first.",
                         "next_action": "Qualifying call", "next_action_date": "2026-12-01"})
 
@@ -371,6 +408,8 @@ def main() -> None:
     pack = {"data": DATA, "emails": {e["id"]: e for e in emails},
             "models": {k: list(v) for k, v in MODELS.items()}}
     tpl = (HERE / "sales-pack.template.html").read_text(encoding="utf-8")
+    for key in ("title", "eyebrow", "lede_who", "warn_customers", "call_note"):
+        tpl = tpl.replace("{{" + key.upper() + "}}", esc(M[key]))
     (OUT / "sales-pack.html").write_text(
         tpl.replace("/*__PACK__*/null", json.dumps(pack, ensure_ascii=False).replace("</", "<\\/")), encoding="utf-8")
     print(f"Built {len(prospects)} catalogues, {len(emails)} emails, CSV and sales pack in {OUT}")

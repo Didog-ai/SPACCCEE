@@ -7,3 +7,5 @@ __pycache__/
 *.zip
 research/qld/out/assets/
 research/qld/out/previews/
+research/*/out/previews/
+research/*/out/assets/

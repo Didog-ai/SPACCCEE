@@ -250,7 +250,7 @@ def read_playbook(section: str) -> str:
     """Read a section of the Innovatix sales playbook in full.
 
     Args:
-        section: File name without extension, e.g. 01-strategy, 02-target-segments, 03-messaging-and-scripts, 04-objection-handling, 05-trade-shows-and-events, 06-government-and-fleet, 07-credit-and-risk, 08-weekly-operating-rhythm, 00-company-facts.
+        section: File name without extension, e.g. 01-strategy, 02-target-segments, 03-messaging-and-scripts, 04-objection-handling, 05-trade-shows-and-events, 06-government-and-fleet, 07-credit-and-risk, 08-weekly-operating-rhythm, 09-new-zealand, 00-company-facts.
     """
     path = PLAYBOOK_DIR / f"{section}.md"
     if not path.exists():

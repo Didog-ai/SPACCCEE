@@ -1,0 +1,600 @@
+{
+  "researched_on": "2026-11-26",
+  "method": "Web searches for New Zealand trailer manufacturers, importers, dealers, hire fleets and rural/hardware chains, then each business's own website (and Trade Me store pages where a business has no site) read for contact details and sourcing. Facts below are as published on the cited pages; 'inference' marks our interpretation. Focus: buyers who could take several containers a month.",
+  "market": {
+    "code": "NZ",
+    "title": "NZ Wholesaler Hit List",
+    "eyebrow": "Pinnacle Trailers · New Zealand prospecting · researched 26 Nov 2026",
+    "lede_who": "High-volume trailer buyers across New Zealand (importers, multi-site dealers, hire fleets and rural and hardware chains)",
+    "warn_customers": "Check none of these already buy from you through an Australian wholesaler. Power Farming's dealers also stock Kea trailers, so expect them to compare.",
+    "call_note": "These sell mainly through Trade Me or we couldn't read their website, so there's no email to use. Contact them through Trade Me or by phone.",
+    "intro_dealer": "I'm with Pinnacle Trailers. We're a steel fabrication company with our own factory in India, and we build galvanised and painted trailers that ship flat-packed to dealers in Australia, where our range is already selling strongly. We're now bringing it to New Zealand.",
+    "intro_builder": "I'm with Pinnacle Trailers. We're a steel fabrication company with our own factory in India, and we supply galvanised trailers and components to trailer businesses in Australia and now New Zealand.",
+    "builder_local": "New Zealand-made",
+    "compliance_bullet": "ADR-approved drawbars and CTA-approved couplings for trailers up to 3500 kg, VINs supplied, and the build documentation your certifier needs for NZ entry certification",
+    "builder_compliance_bullet": "ADR-approved drawbars and CTA-approved couplings up to 3500 kg, VINs supplied, and build documentation for NZ entry certification",
+    "extra_bullets": [
+      "Duty-free into New Zealand once the NZ–India free trade agreement comes into force"
+    ],
+    "why_compliance": [
+      "ADR, CTA and NZ-ready",
+      "ADR-approved drawbars and CTA-approved couplings to 3500 kg, VINs supplied, and build documents to support NZ entry certification."
+    ],
+    "why_price": [
+      "Factory-direct price",
+      "Our own factory, no trader in between. Duty-free into NZ once the NZ–India FTA is in force."
+    ],
+    "plate_vin": "Supplied · NZ cert docs",
+    "support": "Assembly guide supplied, with parts and warranty support.",
+    "proof_lede": "supplies our dealers in Australia",
+    "fine_compliance": "Drawbars are ADR approved and couplings CTA approved for trailers up to 3500 kg ATM. VINs supplied. NZ entry certification is completed by your local certifier using our build documentation.",
+    "meeting_ask": "Would a video call on Tuesday 1 or Thursday 3 December work, or is there a better time for you?",
+    "csv": "nz_prospects.csv",
+    "source": "NZ research, Nov 2026",
+    "bring": "and we can courier a weld cut-section and our mill certificates to you beforehand so you can see the build quality first-hand."
+  },
+  "prospects": [
+    {
+      "id": "lucca-trailers",
+      "company": "Lucca Trailers",
+      "tier": 1,
+      "priority": "High",
+      "est_containers_pm": 2,
+      "confirmed_import": true,
+      "region": "Auckland / Northland / Waikato",
+      "city": "East Tamaki, Auckland",
+      "address": "44 Neilpark Drive, East Tamaki, Auckland (also Riverhead, Kerikeri, Hamilton, Taupo and Whangarei pick-up)",
+      "phones": [
+        "0800 888 491",
+        "027 629 9334"
+      ],
+      "email": "sales@luccatrailers.nz",
+      "website": "https://www.luccatrailers.nz",
+      "contact_name": null,
+      "sells": "Single and tandem axle galvanised trailers, transporters, digger trailers, cages, covers, ramps and parts; rentals and finance. North Island only.",
+      "evidence": [
+        "Website: \"Trailer and transporter parts are made in China to Lucca Trailers' strict engineering specifications\"",
+        "Website: \"The trailers and transporters are assembled in New Zealand as further quality controls\"",
+        "Website: \"Made from hot-dipped galvanised steel\", \"3 year warranty\"; six North Island locations"
+      ],
+      "sourcing": "Imports Chinese-made parts and assembles in NZ (stated on their website).",
+      "cater": "They already buy flat-pack trailer parts from overseas and assemble locally, so we replace their Chinese supplier with no change to their workflow: same flat-pack model, certified steel, ADR-approved drawbars and pay-as-you-sell terms. Six sites means multi-container volume.",
+      "angle": "Swap Chinese parts for certified Indian-built kits: same assembly line, better steel, better terms.",
+      "opener": "I read that Lucca has its trailer parts made in China and assembles them here in New Zealand. That's exactly how we supply dealers, so I thought it was worth a conversation.",
+      "range_line": "single and tandem galvanised trailers and transporters",
+      "meeting": "by video call, or in person at East Tamaki on our next New Zealand trip",
+      "models": [
+        "BX74",
+        "BX84",
+        "CG85",
+        "TD105",
+        "PL35",
+        "CC45",
+        "TP106"
+      ]
+    },
+    {
+      "id": "trade-tested",
+      "company": "Trade Tested",
+      "tier": 1,
+      "priority": "High",
+      "est_containers_pm": 1.5,
+      "confirmed_import": true,
+      "region": "Auckland / Christchurch, ships NZ-wide",
+      "city": "Māngere, Auckland",
+      "address": "Auckland store: 80 Kahakaha Lane, Māngere, Auckland 2022. Christchurch showroom: 9 Commerce Crescent, Islington, Christchurch 8042",
+      "phones": [
+        "0800 800 880"
+      ],
+      "email": "support@tradetested.co.nz",
+      "email_note": "Only a general support address is published. Ask for the buyer or category manager for trailers.",
+      "website": "https://www.tradetested.co.nz",
+      "contact_name": null,
+      "sells": "Large online and showroom retailer of imported goods across many categories, including 7x4 cage trailers with hot-dip galvanised beds and drawbars.",
+      "evidence": [
+        "Website: \"It all began in 2001 when we started importing to a small garage in central Auckland, selling on ... Trade Me\"",
+        "Website: \"45k+ product reviews\", \"50+ service agents\", \"100% NZ owned\"; ships NZ-wide",
+        "Has sold a 7x4 single-axle cage trailer with a hot-dipped galvanised bed and drawbar"
+      ],
+      "sourcing": "Direct importer (stated on their website).",
+      "cater": "A high-volume importer that sells online NZ-wide. Offer a ready-to-sell trailer range with consistent quality and documentation, mixed containers, and a private-label option for their own brand.",
+      "angle": "A dependable, documented trailer supplier for a high-volume online importer, under their brand if they want.",
+      "opener": "Trade Tested has built one of New Zealand's biggest import businesses since 2001. I'd like to show you a trailer range built in our own factory, with the quality paperwork to back it up.",
+      "range_line": "cage and box trailers",
+      "range_phrase": "your customers buy online",
+      "meeting": "by video call, or in person in Māngere on our next New Zealand trip",
+      "models": [
+        "BX64",
+        "BX74",
+        "BX84",
+        "CG74",
+        "CG85",
+        "LM85",
+        "GB"
+      ]
+    },
+    {
+      "id": "gorilla-trailers",
+      "company": "Gorilla Trailers (Half Price Imports)",
+      "tier": 1,
+      "priority": "High",
+      "est_containers_pm": 1,
+      "confirmed_import": true,
+      "region": "Canterbury, ships NZ-wide",
+      "city": "Christchurch",
+      "address": "3 Edison Place (corner of Dyers Road), Christchurch",
+      "phones": [
+        "022 639 3546"
+      ],
+      "email": null,
+      "email_note": "No public email. Contact through their Trade Me store (Half Price Imports) or call.",
+      "website": "https://www.trademe.co.nz/stores/half-price-imports",
+      "contact_name": null,
+      "sells": "Galvanised single and tandem trailers (e.g. 8x4) sold through Trade Me, alongside the Half Price Imports range.",
+      "evidence": [
+        "Trade Me store: \"Since 2012, Gorilla Trailers has been supplying Kiwis with tough, practical trailers at competitive prices\"",
+        "Listings: \"100% NZ Owned, Operated & Assembled\", \"Fully Hot Dip Galvanised\"",
+        "Trade Me store: \"Both brands from one Christchurch location\" (Gorilla Trailers and Half Price Imports)"
+      ],
+      "sourcing": "Imports and assembles in NZ (trades as Half Price Imports; listings say NZ-assembled).",
+      "cater": "An importer that assembles locally and competes on price. Our factory-direct landed cost and pay-as-you-sell terms protect their margin, and certified steel gives them a quality story against cheaper imports.",
+      "angle": "Better landed cost and better steel for a price-led importer.",
+      "opener": "Gorilla Trailers has been supplying Kiwis with tough trailers at sharp prices since 2012. I'd like to show you how we could improve your landed cost without giving up quality.",
+      "range_line": "galvanised single and tandem trailers",
+      "meeting": "by video call, or in person in Christchurch on our next New Zealand trip",
+      "models": [
+        "BX74",
+        "BX84",
+        "CG85",
+        "TD105",
+        "ATV85",
+        "GB"
+      ]
+    },
+    {
+      "id": "mitre-10",
+      "company": "Mitre 10 New Zealand",
+      "tier": 1,
+      "priority": "High (long sales cycle)",
+      "est_containers_pm": 3,
+      "region": "National hardware chain",
+      "city": "Auckland (support office)",
+      "address": "Stores nationwide; approach through the merchandise/supplier team at the support office",
+      "phones": [
+        "See mitre10.co.nz"
+      ],
+      "email": null,
+      "email_note": "No supplier email published. Use the supplier enquiry route on mitre10.co.nz, or ask any store for the trailer category buyer's contact.",
+      "website": "https://www.mitre10.co.nz",
+      "contact_name": null,
+      "sells": "Jobmate-brand trailers in stores: 7x4 Cruiser ($1,749), 7x4 Tipping Hauler and 8x4 Charger, plus mower trailers.",
+      "evidence": [
+        "Website: Jobmate Trailer Cruiser 7x4, SKU 203476, $1,749, stock shown by store",
+        "Website: Jobmate Tipping Hauler 7x4 and Charger 8x4",
+        "Website: buyers arrange their own registration and WoF; the warranty ensures trailers will pass a WoF when new"
+      ],
+      "sourcing": "Not stated. Inference: Jobmate is Mitre 10's own brand, so the trailers are made by a contract supplier. Confirm on the call.",
+      "cater": "The biggest volume opportunity on the list. Pitch to build the Jobmate trailer range under their brand, to their spec, with certified steel and NZ compliance documents. Retail buyers will want samples, testing and firm pricing, so expect a long cycle.",
+      "angle": "Private-label manufacturer for the Jobmate trailer range.",
+      "opener": "Mitre 10's Jobmate trailers are a staple for Kiwi DIYers. I'd like to talk about building that range in our own factory, under your brand and to your spec.",
+      "range_line": "Jobmate 7x4 and 8x4 trailers",
+      "range_phrase": "you stock in store",
+      "meeting": "by video call, or in person in Auckland on our next New Zealand trip",
+      "lead": "Here's what we'd bring to the Jobmate trailer range:",
+      "models": [
+        "BX74",
+        "BX84",
+        "CG74",
+        "TP85",
+        "ATV85",
+        "GB"
+      ]
+    },
+    {
+      "id": "tuff-trailers-nz",
+      "company": "Tuff Trailers (NZ)",
+      "tier": 2,
+      "priority": "High",
+      "est_containers_pm": 1.5,
+      "region": "Auckland, delivers NZ-wide",
+      "city": "Papakura, Auckland",
+      "address": "75 Boundary Road, Papakura, Auckland",
+      "phones": [
+        "0800 69 88 33"
+      ],
+      "email": null,
+      "email_note": "Their website blocks automated reading, so no email was collected. Check tufftrailers.co.nz or call.",
+      "website": "https://www.tufftrailers.co.nz",
+      "contact_name": null,
+      "sells": "Fully welded hot-dip galvanised trailers (e.g. 7x4 with removable 800 mm cage), NZ-wide delivery, finance.",
+      "evidence": [
+        "Trade Me: \"NZ's #1 Trailer Company | 5 Year Warranty | 0800 69 88 33\"",
+        "Trade Me: \"over 800+ 5-star reviews\"",
+        "Listing: \"a brand new fully welded hot dip galvanised trailer NOT a bolt together kitset\""
+      ],
+      "sourcing": "Not stated. They sell fully welded trailers, not kitsets, so offer fully welded units as well as flat-pack.",
+      "cater": "A high-volume, review-driven seller. They stress 'fully welded, not a kitset', so lead with our fully welded options and certified welds, and back their 5-year warranty with mill and welder certificates.",
+      "angle": "Second supplier of fully welded galvanised trailers that can carry their 5-year warranty.",
+      "opener": "Tuff Trailers has built a huge following with fully welded galvanised trailers and an 800-plus review track record. I'd like to show you a second source that can carry your 5-year warranty.",
+      "range_line": "fully welded galvanised box and cage trailers",
+      "meeting": "by video call, or in person in Papakura on our next New Zealand trip",
+      "models": [
+        "BX74",
+        "BX84",
+        "CG74",
+        "CG85",
+        "TD105",
+        "TD126"
+      ]
+    },
+    {
+      "id": "auto-trailer",
+      "company": "Auto Trailer (GT Trailers stockist)",
+      "tier": 2,
+      "priority": "Medium",
+      "est_containers_pm": 0.75,
+      "region": "Waikato",
+      "city": "Frankton, Hamilton",
+      "address": "9 Bandon Street, Frankton, Hamilton 3204",
+      "phones": [
+        "07 211 7490",
+        "07 847 8908"
+      ],
+      "email": "sales@autotrailer.co.nz",
+      "website": "https://autotrailer.co.nz",
+      "contact_name": null,
+      "sells": "Stockist of the full GT Trailers range (NZ-engineered, hot-dip galvanised, 2-year guarantee), plus jockey wheels and trailer parts.",
+      "evidence": [
+        "Website: \"partnered with GT Trailers to bring you their full range of trailers\"",
+        "Website: GT trailers are \"NZ-engineered, hot-dip galvanised, 2-year guarantee\""
+      ],
+      "sourcing": "Resells another brand (GT Trailers).",
+      "cater": "A reseller, not a builder, so they can add a second range easily. Offer a value-to-premium range with pay-as-you-sell terms and a mixed trial container.",
+      "angle": "Second range with better margin and no stock risk.",
+      "opener": "Auto Trailer has built a strong Waikato business on the GT Trailers range. I'd like to show you a second range that could add margin alongside it.",
+      "range_line": "galvanised box, cage and tandem trailers",
+      "meeting": "by video call, or in person in Hamilton on our next New Zealand trip",
+      "models": [
+        "BX74",
+        "BX84",
+        "CG85",
+        "TD105",
+        "LM85",
+        "GB"
+      ]
+    },
+    {
+      "id": "hirepool",
+      "company": "Hirepool",
+      "tier": 2,
+      "priority": "High",
+      "est_containers_pm": 1,
+      "region": "National hire chain",
+      "city": "Auckland (head office)",
+      "address": "Branches nationwide (vehicle rental arm: 9 branches in all major centres)",
+      "phones": [
+        "0800 15 15 15"
+      ],
+      "email": "info@hirepool.co.nz",
+      "email_note": "General address. Ask for the fleet or procurement manager for trailers.",
+      "website": "https://www.hirepool.co.nz",
+      "contact_name": null,
+      "sells": "Equipment and vehicle hire, including cage/high-side, furniture, standard/low-side and transport trailers.",
+      "evidence": [
+        "Website: trailer hire categories for cage/high-side, furniture, standard/low-side and transport trailers",
+        "Hirepool Vehicle Rentals: \"9 branches conveniently located nationwide, including all major centres\""
+      ],
+      "sourcing": "Fleet buyer.",
+      "cater": "A national hire fleet that replaces trailers on a cycle. Hire trailers take a beating, so lead with certified welds, heavy galvanising, fewer repairs between hires, and fleet pricing on a mixed container.",
+      "angle": "Tougher fleet trailers at a fleet price: lower cost per hire.",
+      "opener": "Hirepool runs one of New Zealand's biggest hire trailer fleets. I'd like to show you a fully galvanised range built to take hire-fleet punishment, at a fleet price.",
+      "range_line": "cage, furniture, standard and transport trailers",
+      "range_phrase": "you hire out",
+      "meeting": "by video call, or in person on our next New Zealand trip",
+      "lead": "Here's why fleets are looking at us:",
+      "models": [
+        "BX74",
+        "BX84",
+        "CG85",
+        "VAN74",
+        "TD105",
+        "CC45",
+        "PL35"
+      ],
+      "fleet": true
+    },
+    {
+      "id": "hireace",
+      "company": "Hireace",
+      "tier": 2,
+      "priority": "Medium",
+      "est_containers_pm": 0.5,
+      "region": "Nationwide trailer and vehicle hire",
+      "city": "Auckland",
+      "address": "Branches nationwide, with one-way hire between branches",
+      "phones": [
+        "0800 00 11 22"
+      ],
+      "email": "info@hireace.co.nz",
+      "website": "https://www.hireace.co.nz",
+      "contact_name": null,
+      "sells": "Trailer and vehicle hire, including one-way trailer rental between branches.",
+      "evidence": [
+        "Website: \"a wide variety of trailers and vehicles at an extremely competitive price\"",
+        "Website: \"One way vehicle hire from any of our branches\"; a family business"
+      ],
+      "sourcing": "Fleet buyer.",
+      "cater": "One-way hire means trailers do long highway runs and need to be tough. Pitch galvanised box, cage and furniture trailers at a fleet price, with spare parts in the same container.",
+      "angle": "Durable one-way hire trailers with spare parts shipped in the same container.",
+      "opener": "Hireace's one-way trailer hire puts a lot of kilometres on your fleet. I'd like to show you a fully galvanised range built for exactly that, at a fleet price.",
+      "range_line": "box, cage and furniture trailers",
+      "range_phrase": "you hire out",
+      "meeting": "by video call, or in person in Auckland on our next New Zealand trip",
+      "lead": "Here's why fleets are looking at us:",
+      "models": [
+        "BX74",
+        "BX84",
+        "CG85",
+        "VAN74",
+        "TD105"
+      ],
+      "fleet": true
+    },
+    {
+      "id": "power-farming",
+      "company": "Power Farming New Zealand",
+      "tier": 2,
+      "priority": "High",
+      "est_containers_pm": 1.5,
+      "region": "National rural machinery distributor",
+      "city": "Morrinsville, Waikato",
+      "address": "Head office Morrinsville; 21 dealerships nationwide",
+      "phones": [
+        "0800 627 222"
+      ],
+      "email": null,
+      "email_note": "No email published. Call the head office and ask for the product manager for trailers and farm equipment.",
+      "website": "https://www.powerfarming.co.nz",
+      "contact_name": null,
+      "sells": "Imports agricultural machinery brands and distributes them through its dealer network. Its dealers also sell trailers (e.g. Power Farming Northland is a Kea Trailers stockist).",
+      "evidence": [
+        "Website: distributes machinery brands \"through extensive dealer networks\"; \"an extensive nationwide network of 21 dealerships\", over 350 staff",
+        "Kea Trailers lists Power Farming Northland (Whangarei) as a dealer"
+      ],
+      "sourcing": "Importer-distributor of machinery; currently sells NZ-made trailers through some dealers.",
+      "cater": "A national importer-distributor with 21 dealerships, so one agreement reaches every region. Pitch a farm and plant trailer range they can distribute under their own brand or ours, with stock crates, quad and plant trailers in mixed containers.",
+      "angle": "A distributable farm trailer range for 21 dealerships, from one supplier.",
+      "opener": "Power Farming's 21 dealerships put you in front of farmers in every region. I'd like to show you a farm and plant trailer range you could distribute through that network.",
+      "range_line": "farm, quad and plant trailers",
+      "range_phrase": "your dealers could sell",
+      "meeting": "by video call, or in person in Morrinsville on our next New Zealand trip",
+      "lead": "Here's what we'd bring to your dealer network:",
+      "models": [
+        "ATV85",
+        "LS85",
+        "BX85H",
+        "TD126",
+        "PL35",
+        "FT106",
+        "TP106"
+      ]
+    },
+    {
+      "id": "farmlands",
+      "company": "Farmlands",
+      "tier": 2,
+      "priority": "Medium",
+      "est_containers_pm": 1,
+      "region": "National rural co-operative",
+      "city": "Nationwide",
+      "address": "Rural supplies stores nationwide; approach through the support office",
+      "phones": [
+        "0800 200 600"
+      ],
+      "email": "ask@farmlands.co.nz",
+      "email_note": "General address. Ask for the merchandise buyer for farm equipment.",
+      "website": "https://www.farmlands.co.nz",
+      "contact_name": null,
+      "sells": "Rural supplies through a nationwide store network (trailer stocking not confirmed).",
+      "evidence": [
+        "Website: rural supplies co-operative with a national store network; general enquiries ask@farmlands.co.nz, 0800 200 600"
+      ],
+      "sourcing": "Not stated. We couldn't confirm Farmlands currently sells trailers, so qualify that first.",
+      "cater": "A large rural co-op whose members buy farm and quad trailers. Pitch a farm trailer line for stores, or for members to order through Farmlands, under a co-op brand if they want.",
+      "angle": "A farm trailer range for co-op stores, private label available.",
+      "opener": "Farmlands supplies farmers right across New Zealand. I'd like to explore whether a galvanised farm and quad trailer range would suit your stores.",
+      "range_line": "farm, quad and stock trailers",
+      "range_phrase": "your members use",
+      "meeting": "by video call, or in person on our next New Zealand trip",
+      "lead": "Here's what we could bring to your stores:",
+      "models": [
+        "ATV85",
+        "LS85",
+        "BX85H",
+        "TD105",
+        "TP85"
+      ]
+    },
+    {
+      "id": "pgg-wrightson",
+      "company": "PGG Wrightson",
+      "tier": 2,
+      "priority": "Medium-Low",
+      "est_containers_pm": 0.75,
+      "region": "National rural retailer",
+      "city": "Christchurch (head office)",
+      "address": "About 90 rural retail locations across the North and South Islands",
+      "phones": [
+        "0800 102 276",
+        "03 343 9100"
+      ],
+      "email": null,
+      "email_note": "No email published. Use the contact routes on pggwrightson.co.nz or call head office.",
+      "website": "https://www.pggwrightson.co.nz",
+      "contact_name": null,
+      "sells": "Rural supplies, livestock, wool, water and irrigation services (trailer stocking not confirmed).",
+      "evidence": [
+        "Website: \"over 1,800 people located throughout New Zealand\" and more than 170 years serving farmers",
+        "Retail network page: about 90 locations across both islands"
+      ],
+      "sourcing": "Not stated. We couldn't confirm PGG Wrightson sells trailers, so qualify first.",
+      "cater": "Like Farmlands: a national rural retailer. Pitch stock crate, quad and farm trailers for their stores and livestock customers.",
+      "angle": "Farm and stock trailers for a national rural retailer.",
+      "opener": "PGG Wrightson works with farmers right across New Zealand. I'd like to explore whether a galvanised farm and stock trailer range would suit your retail network.",
+      "range_line": "farm, quad and stock trailers",
+      "range_phrase": "your customers use",
+      "meeting": "by video call, or in person on our next New Zealand trip",
+      "lead": "Here's what we could bring to your stores:",
+      "models": [
+        "LS85",
+        "ATV85",
+        "BX85H",
+        "TD105"
+      ]
+    },
+    {
+      "id": "kea-trailers",
+      "company": "Kea Trailers",
+      "tier": 3,
+      "priority": "Medium (big volume if it lands)",
+      "est_containers_pm": 1.5,
+      "region": "Waikato / Canterbury, dealers nationwide",
+      "city": "Te Rapa, Hamilton",
+      "address": "Main office: 145 Maui Street, Te Rapa, Hamilton. Christchurch: 4 Green Lane, Sockburn",
+      "phones": [
+        "0800 869 532",
+        "03 341 6464"
+      ],
+      "email": "sales@keatrailers.co.nz",
+      "email_note": "Christchurch branch: chsales@keatrailers.co.nz",
+      "website": "https://keatrailers.co.nz",
+      "contact_name": null,
+      "sells": "Light trailers of all types, made in NZ, sold from Hamilton and Christchurch and through a nationwide dealer network (Honda, Power Farming and machinery dealers).",
+      "evidence": [
+        "Website: \"the leading light trailer manufacturer in New Zealand\" with \"40+ years experience\"",
+        "Website: \"100% New Zealand Made\"; dealers from Kerikeri to Christchurch"
+      ],
+      "sourcing": "NZ manufacturer.",
+      "cater": "NZ's leading light-trailer builder, with an NZ-made brand. Don't pitch finished trailers against it. Offer galvanised chassis, drawbars and sub-assemblies to add capacity, or a separately branded value range for their dealer network.",
+      "angle": "Capacity and component partner, never a replacement for their NZ-made line.",
+      "opener": "Kea is New Zealand's leading light-trailer builder. I'm reaching out to ask whether galvanised chassis, drawbars or sub-assemblies from our steel fabrication plant could help with capacity.",
+      "range_line": "galvanised chassis and sub-assemblies",
+      "meeting": "by video call, or in person in Hamilton on our next New Zealand trip",
+      "models": [
+        "CHS",
+        "CAGE",
+        "BX74",
+        "BX84"
+      ]
+    },
+    {
+      "id": "prescott-trailers",
+      "company": "Prescott Trailers",
+      "tier": 3,
+      "priority": "Low",
+      "est_containers_pm": 0.25,
+      "region": "Bay of Plenty",
+      "city": "Te Puke",
+      "address": "29 Station Road, Te Puke, Bay of Plenty",
+      "phones": [
+        "07 573 9130"
+      ],
+      "email": "sales@prescotttrailers.co.nz",
+      "website": "https://prescotttrailers.co.nz",
+      "contact_name": null,
+      "sells": "Domestic, commercial, farm and quad, boat and kayak, flat deck and transporter trailers; trailer crates; custom builds.",
+      "evidence": [
+        "Website: \"over 50 years of experience designing and building trailers for the New Zealand market\"",
+        "Website: \"While it is almost impossible to build a trailer solely from NZ made components, we strive to ensure that the majority of materials and components are manufactured in NZ\""
+      ],
+      "sourcing": "NZ manufacturer that already uses some imported components.",
+      "cater": "They openly use some imported components, so offer certified components (drawbars, couplings, chassis) to cut their build time.",
+      "angle": "Certified components that speed up their build.",
+      "opener": "Prescott has built trailers in Te Puke for over 50 years. I wanted to ask whether certified galvanised drawbars, chassis or sub-assemblies could help speed up your builds.",
+      "range_line": "galvanised chassis, drawbars and sub-assemblies",
+      "meeting": "by video call, or in person in Te Puke on our next New Zealand trip",
+      "models": [
+        "CHS",
+        "CAGE",
+        "LS85"
+      ]
+    },
+    {
+      "id": "trailerworx",
+      "company": "TrailerWorx",
+      "tier": 3,
+      "priority": "Low",
+      "est_containers_pm": 0.25,
+      "region": "Auckland",
+      "city": "Dairy Flat, Auckland",
+      "address": "Landfill Access Road, Dairy Flat, Auckland 0632 (first driveway on the right)",
+      "phones": [
+        "See trailerworx.co.nz"
+      ],
+      "email": "info@trailerworx.co.nz",
+      "website": "https://www.trailerworx.co.nz",
+      "contact_name": null,
+      "sells": "NZ-built fully welded hot-dip galvanised trailers, customisation, parts, accessories and repairs.",
+      "evidence": [
+        "Website: \"fully welded hot dipped galvinised trailers proudly designed and built in New Zealand by a New Zealand owned company\"; \"over 10 years\""
+      ],
+      "sourcing": "NZ manufacturer.",
+      "cater": "A small NZ builder. Offer rolling chassis or standard sizes so they can take on more work without hiring.",
+      "angle": "Chassis and standard sizes to grow output without hiring.",
+      "opener": "TrailerWorx builds fully welded galvanised trailers in Dairy Flat. I wanted to ask whether galvanised chassis or standard sizes from our factory could help you take on more work.",
+      "range_line": "galvanised chassis and standard sizes",
+      "meeting": "by video call, or in person on our next New Zealand trip",
+      "models": [
+        "CHS",
+        "BX74",
+        "BX84"
+      ]
+    }
+  ],
+  "call_only": [
+    {
+      "company": "Best Trailers Ltd (Penrose, Auckland)",
+      "phone": "Trade Me only",
+      "address": "Penrose, Auckland. Galvanised 7x4 to 10x6 and 15x7 flat decks; delivers NZ-wide",
+      "note": "Contact through their Trade Me listings. No website found."
+    },
+    {
+      "company": "X-Trailers (Māngere, Auckland)",
+      "phone": "Trade Me only",
+      "address": "Māngere, Auckland. Hot-dip galvanised tandems, mower/plant trailers; 5-year structural warranty",
+      "note": "Contact through their Trade Me listings. No website found."
+    },
+    {
+      "company": "Kennards Hire NZ",
+      "phone": "See kennards.co.nz",
+      "address": "Equipment hire branches",
+      "note": "Website didn't return contact details to an automated read. Phone to find the fleet buyer.",
+      "segment": "hire_company"
+    },
+    {
+      "company": "TR Group",
+      "phone": "See trgroup.co.nz",
+      "address": "Rental branches nationwide; hires box, flatbed and caged trailers",
+      "note": "Mostly truck and heavy trailer rental. Qualify whether light trailers are worth pitching.",
+      "segment": "hire_company"
+    }
+  ],
+  "excluded": [
+    {
+      "company": "Trailer World (Tuakau, part of Thoroughbred)",
+      "reason": "Markets itself as 100% NZ made and warns buyers off \"imported kits bolted together locally\". An import pitch would backfire."
+    },
+    {
+      "company": "Reid Trailers (South Auckland)",
+      "reason": "Markets NZ-sourced components and NZ or Australian steel. Low fit."
+    },
+    {
+      "company": "TMC Trailers",
+      "reason": "Heavy transport truck trailers and bodies. Not our light-trailer product."
+    },
+    {
+      "company": "DAMEL",
+      "reason": "One-off custom builds. Low volume."
+    }
+  ]
+}
